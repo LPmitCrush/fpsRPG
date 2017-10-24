@@ -1,0 +1,35 @@
+class DruidsRPGKeyBinding extends GUIUserKeyBinding
+		config(fpsRPG);
+
+defaultproperties
+{
+     KeyData(0)=(KeyLabel="fpsRPG Extensions",bIsSection=True)
+     KeyData(1)=(Alias="DropHealth",KeyLabel="Drop Health")
+     KeyData(2)=(Alias="DropAdrenaline",KeyLabel="Drop Adrenaline")
+     KeyData(3)=(KeyLabel="fpsRPG Artifacts",bIsSection=True)
+     KeyData(4)=(Alias="SelectTriple",KeyLabel="Select Triple")
+     KeyData(5)=(Alias="SelectGlobe",KeyLabel="Select Globe")
+     KeyData(6)=(Alias="SelectMWM",KeyLabel="Select Magic Weapon Maker")
+     KeyData(7)=(Alias="SelectDouble",KeyLabel="Select Double Modifier")
+     KeyData(8)=(Alias="SelectMax",KeyLabel="Select Max Modifier")
+     KeyData(9)=(Alias="SelectPlusOne",KeyLabel="Select Plus One Modifier")
+     KeyData(10)=(Alias="SelectBolt",KeyLabel="Select Lightning Bolt")
+     KeyData(11)=(Alias="SelectRepulsion",KeyLabel="Select Repulsion")
+     KeyData(12)=(Alias="SelectFreezeBomb",KeyLabel="Select FreezeBomb")
+     KeyData(13)=(Alias="SelectPoisonBlast",KeyLabel="Select PoisonBlast")
+     KeyData(14)=(Alias="SelectMegaBlast",KeyLabel="Select MegaBlast")
+     KeyData(15)=(Alias="SelectHealingBlast",KeyLabel="Select HealingBlast")
+     KeyData(16)=(Alias="SelectMedic",KeyLabel="Select Medic Weapon Maker")
+     KeyData(17)=(Alias="SelectFlight",KeyLabel="Select Boots of Flight")
+     KeyData(18)=(Alias="SelectMagnet",KeyLabel="Select Electro-Magnet")
+     KeyData(19)=(Alias="SelectTeleport",KeyLabel="Select Teleporter")
+     KeyData(20)=(Alias="SelectBeam",KeyLabel="Select Lightning Beam")
+     KeyData(21)=(Alias="SelectRod",KeyLabel="Select Lightning Rod")
+     KeyData(22)=(Alias="SelectSphereInv",KeyLabel="Select Invulnerability Sphere")
+     KeyData(23)=(Alias="SelectSphereHeal",KeyLabel="Select Healing Sphere")
+     KeyData(24)=(Alias="SelectSphereDamage",KeyLabel="Select Damage Sphere")
+     KeyData(25)=(Alias="SelectRemoteDamage",KeyLabel="Select Remote Damage")
+     KeyData(26)=(Alias="SelectRemoteInv",KeyLabel="Select Remote Invulnerability")
+     KeyData(27)=(Alias="SelectRemoteMax",KeyLabel="Select Remote Max Modifier")
+     KeyData(28)=(Alias="SelectShieldBlast",KeyLabel="Select ShieldBlast")
+}

@@ -1,0 +1,33 @@
+//NewRPG List
+//things to do before remaking RPG:
+
+Add Store from AUDRPG/New Artifacts/ FlameRPG Abilities(Res, Godlyness, etc...unlisted ones)
+
+Renaming all "UT2004RPG" to specified RPG Name such as UT2004RPG ---> "FlowRPG" or watevs...
+
+Make sure thers no bugs lol (especially Engineer)
+
+
+
+NOTE:
+*
+renaming all Druids to its style like FlameRPG... (Flairz will do that)
+*
+
+thats all for now. the rest lies in flairz hands of recreating the store to wep store and artifacts
+
+
+OPTIONAL:
+/*
+can also recreate Textures/StaticMeshes Files if want from 
+
+Textures:
+UTRPGTextures
+UTRPGTextures2
+DruidsRPPGShaders1
+DCText
+
+StaticMeshes:
+DCStatic
+UTRPGStatics (i think theres 2, check)
+*/

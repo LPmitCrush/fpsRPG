@@ -1,0 +1,978 @@
+[AbilityAdrenPerWave]
+AbilityName="ÿ¥Energy Per Wave"
+Description="Gives you +1% per level of your maximum adrenaline per wave.|Cost: 5,6,7,8,9,10...|Max Level: 50"
+
+[AbilityAdrenalineRegen]
+AbilityName="Adrenal Drip"
+Description="Gives 1 adrenaline per 5 seconds per level. Does not give adrenaline while performing a combo or using an artifact. You must have spent 25 points in your Adrenaline Max stat for each level of this ability you want to purchase. (Max Level: 100)"
+
+[AbilityAdrenalineSurge]
+AbilityName="Adrenal Surge"
+Description="For each level of this ability, you gain 2% more adrenaline from all kill related adrenaline bonuses. You must have a Damage Bonus of at least 50 and an Adrenaline Max stat at least 150 to purchase this ability. (Max Level: 50)"
+
+[AbilityAirControl]
+AbilityName="Airmaster"
+Description="Increases your air control by 50% per level. You must be a Level equal to ten times the ability level you wish to have before you can purchase it. (Max Level: 5)"
+
+[AbilityAmmoRecall]
+AbilityName="ÿ¥Refuel"
+Description="Adds 1 ammo per level to each ammo type you own every 3 seconds. Does not give ammo to superweapons or the translocator. You must have a Max Ammo stat of at least 50 to purchase this ability. (Max Level: 4)"
+
+[AbilityAmmoRegen]
+AbilityName="Resupply"
+Description="Adds 1 ammo per level to each ammo type you own every 3 seconds. Does not give ammo to superweapons or the translocator. You must have a Max Ammo stat of at least 50 to purchase this ability. (Max Level: 8)"
+
+[AbilityArmorRegen]
+AbilityName="ÿArmor Regeneration"
+Description="Heals 2 armor per second per level. Does not heal past starting armor amount. You must have a Health Bonus stat equal to 25 times the ability level you wish to have before you can purchase it. |Cost (per level): 15,20,25,30,..."
+
+[AbilityArmorVampire]
+AbilityName="ÿVehicle Vampirism"
+Description="Whenever you damage another player from a vehicle or turret, it is healed for 3% of the damage per level (up to its starting health amount). You must have a Damage Bonus of at least 50 to purchase this ability. (Max Level: 10) You must be an Engineer to purchase this skill.|Cost (per level): 10,15,20,25,30,35,40,45,50,55"
+
+[AbilityAwareness]
+AbilityName="Awareness"
+Description="Informs you of your enemies' health with a display over their heads. At level 1 you get a colored indicator (green, yellow, or red)|level 2: you get a colored health bar and a shield bar|Level 3: Shows you the monsters health in numbers (above their head)|You need atleast 10 points into all stats to buy this ability"
+
+[AbilityConstructionHealthBonus]
+AbilityName="Constructions: Health Bonus"
+Description="Gives an additional health bonus to your summoned constructions. Each level adds 20% health to your construction's max health. (Max Level: 10)|You must be an Engineer to purchase this skill.|Cost (per level): 2,4,6,8,10,12,14,16,18,20"
+
+[AbilityConstructionRange]
+AbilityName="ÿSentinel Range Upgrade"
+Description="Gives an Additional range bonus to your summoned sentinels. Each level Adds 10% range to your sentinels' max range.|(Max Level: 5)|Cost (per level): 10,20,30"
+
+[AbilityCounterShove]
+AbilityName="CounterShove"
+Description="Whenever you are damaged by another player, 25% of the momentum per level (or 150% at level 5) is also done to the player who hurt you. Will not CounterShove a CounterShove. You must have a Damage Reduction of at least 50 to purchase this ability. (Max Level: 5)"
+
+[AbilityDefenseSentinelArmor]
+AbilityName="Ã¿DefSent Armor healing"
+Description="Allows defense sentinels to heal armor when they are not busy. Each level adds 1 to each healing shot.|Cost (per level): 10,10,10,10,10,..."
+
+[AbilityDefenseSentinelEnergy]
+AbilityName="ÿDefSent Energy Bonus"
+Description="Allows defense sentinels to supply adrenaline when they are not busy. Each level adds 1 to each healing shot.|Must have DefSent Healing to unlock this ability|Cost (per level): 10,10,10,10,10,..."
+
+[AbilityDefenseSentinelHealing]
+AbilityName="ÿDefSent Health Bonus"
+Description="Allows defense sentinels to heal nearby players when they are not busy. Each level adds 1 to each healing shot.|Must have Loaded Engineer to unlock this ability|Cost (per level): 10,10,10,10,10,..."
+
+[AbilityDefenseSentinelResupply]
+AbilityName="ÿDefSent Resupply"
+Description="Allows defense sentinels to grant ammo resupply when they are not busy. Each level adds 1 to each healing shot.|Cost (per level): 10,10,10,10,10,..."
+
+[AbilityDefenseSentinelShields]
+AbilityName="ÿDefSent Shield healing"
+Description="Allows defense sentinels to heal shields when they are not busy. Each level adds 1 to each healing shot.|Cost (per level): 10,10,10,10,10,..."
+
+[AbilityEnergyShield]
+AbilityName="Energy Shield"
+Description="Uses adrenaline as a shield. You must be an Adrenaline Master to purchase this skill. |Cost (per level): 15. Max Level: 2."
+
+[AbilityEnergyVampire]
+AbilityName="ÿ¥Energy Leech"
+Description="Whenever you damage another player, you gain 1% of the damage as adrenaline. Each level increases this by 1%. (Max Level: 10) |Cost: 10,15,20,25,30"
+
+[AbilityEngineerAwareness]
+AbilityName="Engineer Awareness"
+Description="Informs you of your friends' shield strength with a display over their heads. You get a large, brightly colored health bar with a white background, that shrinks and changes color as the target shield gains health. The bar will turn a full solid yellow if the shield is fully healed. You need to be an Engineer with Shield Healing to purchase this skill. Cost per level: 10. (Max Level: 1)"
+
+[AbilityEnhancedDamage]
+AbilityName="Advanced Damage Bonus"
+Description="Increases your cumulative total damage bonus by 1.5% per level. You must be a Weapons Master to purchase this skill.|Cost (per level): 5. Max Level: 10. You must be level 75 to purchase the first level of this ability, level 76 to purchase the second level, and so on."
+
+[AbilityEnhancedReduction]
+AbilityName="Advanced Damage Reduction"
+Description="Increases your cumulative total damage reduction by 4% per level. You must be a Medic / Monster Master to purchase this skill. Does not apply to self damage.|Cost (per level): 5. Max Level: 10. You must be level 40 to purchase the first level of this ability, level 41 to purchase the second level, and so on."
+
+[AbilityExpHealing]
+AbilityName="Experienced Healing"
+Description="Allows you to gain additional experience for healing others with the Medic Gun.|Each level allows you to gain an additional 1% experience from healing. (Max Level: 9)|You must be a Monster Master and have Loaded Medic to purchase this skill.|Cost (per level): 5,8,11,14,17,20,23,26,29"
+
+[AbilityExtraExperience]
+AbilityName="Experience Surge"
+Description="Increases the amount of Experience you get for killing a monster by 1% per level"
+
+[AbilityFastWeaponSwitch]
+AbilityName="Speed Switcher"
+Description="For each level of this ability, you switch weapons 50% faster. You need to have at least 50 Weapon Speed before you can purchase this ability. (Max Level: 6)"
+
+[AbilityGhost]
+AbilityName="Ghost"
+Description="The first time you take damage that would kill you, instead of dying you will become non-corporeal and move to a new location, where you will continue your life. At level 1 you will move slowly as a ghost and return with a health of 1. At level 2 you will move somewhat more quickly and will return with 100 health. At level 3 you will move fastest and will return with your normal starting health.|At level 4 if you have your translocation beacon set, you will move towards it.|Level 5 Instant teleport to your trans beacon if its set, if you do not have it set you will get a random teleport.|You need to have at least 200 Health Bonus and 100 Damage Reduction to purchase this ability. You can't have both Ghost and Ultima at the same time. (Max Level: 5)"
+
+[AbilityHoarding]
+AbilityName="Hoarding"
+Description="Allows you to pick up items even if you don't need them. You need to have at least 50 points in every stat to purchase this ability. (Max Level: 1)"
+
+[AbilityJumpZ]
+AbilityName="Power Jump"
+Description="Increases your jumping height by 10% per level. The Speed adrenaline combo will stack with this effect. You must be a Level equal to ten times the ability level you wish to have before you can purchase it. (Max Level: 5)"
+
+[AbilityLactate]
+AbilityName="Lactate"
+Description="This special ability will prevent anyone from receiving damage by a Milk Monster (milk bottles + googles)...most of the time|Beware: Killing the milk monster is not necessarily a good thing! You have been warned|Required Level: Level 100|Cost: 60|Max Level: 1"
+
+[AbilityLimitBreak]
+AbilityName="Limit Break"
+Description="As you play, you earn limit points when you are damaged by the enemy. You earn less points for damage when you are a higher level and when you have more health. After earning a Limit Break, once you fall to critical health, you will unleash a very powerfull maneuver.|Cost (per level): 7, 14, 21"
+
+[AbilityListFont]
+FontArrayNames=("UT2003Fonts.FontSmallText","UT2003Fonts.FontNeuzeit9","UT2003Fonts.FontNeuzeit11","UT2003Fonts.FontNeuzeit14")
+
+[AbilityLoadedArtifacts]
+AbilityName="ÿ¥Loaded Artifacts"
+Description="When you spawn:|Level 1: You are granted some slow drain artifacts.|Level 2: You are granted all slow drain artifacts.|Level 3: Your breakable artifacts are made unbreakable and are given Super Magic Weapon Maker|Level 4: You are given Sphere Damage|Level 5: You are fully loaded with a Safety Sphere|Cost: 15,10,25,30,35|Max Level: 5"
+
+[AbilityLoadedEngineer]
+AbilityName="Loaded Engineer"
+Description="Learn sentinels, turrets, vehicle and buildings to summon. At each level, you can summon better items. You need to have a level six times the ability level you wish to purchase. (Max Level: 15)|You must be an Engineer to purchase this skill.|Cost (per level): 3,4,5,6,7,8,9,10,11,12,13,14,15,16,17"
+
+[AbilityLoadedHealing]
+AbilityName="Loaded Medic"
+Description="Gives you bonuses towards healing.|Level 1 gives you a Medic Weapon Maker. |Level 2 allows you to use the Medic Gun to heal teammates +100 beyond their max health. |Level 3 allows you to heal teammates +150 points beyond their max health. (Max Level: 3)|You must be a Monster Master to purchase this skill.|Cost (per level): 3,6,9"
+
+[AbilityLoadedMonsters]
+AbilityName="Loaded Monsters"
+Description="Learn new monsters to summon with Monster Points. At each level, you can summon a better monster. (Max Level: 15)|You must be a Monster Master to purchase this skill.|Cost (per level): 2,3,4,5,6,7,8,9,10,11,12,13,14,15,16"
+
+[AbilityLoadedWeapons]
+AbilityName="ÿLoaded Weapons"
+Description="When you spawn:|Level 1: You are granted all default weapons with the default percentage chance for magic weapons.|Level 2: You are granted onslaught weapons and all weapons with max ammo.|Level 3: You are granted super weapons (Invasion game types only).|Level 4: Magic weapons will be generated for all your weapons.|Level 5: You receive all positive magic weapons.|You must be level 40 before you can buy level 2 and level 55 before you can buy level 3.|Cost (per level): 15,20,25,30,35"
+
+[AbilityMedicAwareness]
+AbilityName="Medic Awareness"
+Description="Informs you of your friends' health with a display over their heads. At level 1 you get a small dully-colored indicator - blue for very healthy, green for reasonably healthy, yellow for hurt, and then red for near death. At level 2 you get a larger and more brightly colored health bar with a white background, that shrinks and changes colors as the target gains health. The bar will turn a full solid blue if the target is fully healed. You need to be a Loaded Medic level 3 to purchase this skill. Cost per level: 10, 15. (Max Level: 2)"
+
+[AbilityMonsterHealthBonus]
+AbilityName="Summons: Health Bonus"
+Description="Gives an additional health bonus to your summoned monsters. Each level adds 10% health to your monster's max health. (Max Level: 10)|You must be a Monster Master to purchase this skill.|Cost (per level): 2,6,10,14,18,22,26,30,34,38"
+
+[AbilityMonsterPoints]
+AbilityName="Monster Points"
+Description="Allows you to summon monsters with the loaded monsters skill. (Max Level: 20)|You must be a Monster Master to purchase this skill.|Cost (per level): 2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21"
+
+[AbilityMonsterSkill]
+AbilityName="Summons: Intelligence"
+Description="Increases your summoned monsters' intelligence. At each level, your pet monsters become more intelligent. (Max Level: 7)|You must be a Monster Master to purchase this skill.|Cost (per level): 2,3,4,5,6,7,8"
+
+[AbilityMonsterSummon]
+AbilityName="Monster Tongue"
+Description="With this ability, you can convince monsters to come to your aid. A monster will appear and follow you around, attacking any enemies it sees, and if it dies, another will eventually come to take its place. You will get the score and EXP for any of its kills. The level of the ability determines the type of monster that will assist you. Additionally, the monster will have the benefits of all of your stats and abilities except those which act on your death. You must have at least 75 Damage Bonus and 75 Damage Reduction to purchase this ability. (Max Level: 8)"
+
+[AbilityNoWeaponDrop]
+AbilityName="ÿ¥Denial"
+Description="The first level of this ability simply prevents you from dropping a weapon when you die (but you don't get it either). The second level allows you to respawn with the weapon and ammo you were using when you died. Level 3 will save all your weapons when you die. You need to be at least Level 25 to purchase this ability. (Max Level: 3)|This ability does not trigger for self-inflicted death.|Cost (per level): 20,25,30"
+
+[AbilityRapidBuild]
+AbilityName="Constructions: Rapid Build"
+Description="Reduces the delay before you can buld the next item. Each level takes 10% health off your recovery time. (Max Level: 5)|You must be an Engineer to purchase this skill.|Cost (per level): 4,5,6,7,8"
+
+[AbilityReduceFallDamage]
+AbilityName="Iron Legs"
+Description="Increases the distance you can safely fall by 25% per level and reduces fall damage for distances still beyond your capacity to handle. Your Health Bonus stat must be at least 50 to purchase this ability. (Max Level: 4)"
+
+[AbilityReduceSelfDamage]
+AbilityName="Cautiousness"
+Description="Reduces self damage by 15% per level. Your Health Bonus stat must be at least 50 and your Damage Reduction stat at least 25 to purchase this ability. (Max Level: 20)"
+
+[AbilityRegen]
+AbilityName="Regeneration"
+Description="Heals 1 health per second per level. Does not heal past starting health amount. You must have a Health Bonus stat equal to 30 times the ability level you wish to have before you can purchase it. (Max Level: 10)"
+
+[AbilityRetaliate]
+AbilityName="Retaliation"
+Description="Whenever you are damaged by another player, 5% of the damage per level is also done to the player that hurt you. Your Damage Bonus stat and your opponent's Damage Reduction stat are applied to this extra damage. You can't retaliate to retaliation damage and retaliation damage will not kill the enemy by itself. You must have a Damage Reduction of at least 50 to purchase this ability. (Max Level: 25)"
+
+[AbilityShieldHealing]
+AbilityName="Shield Healing"
+Description="Allows Engineers to heal other people's shields.|Level 1 enables the Engineers Link Gun. |Level 2 Gives double the experience for healing, Level 3 triple the experience, and gives the Shield Blast artifact. (Max Level: 3)|You must be an Engineer to purchase this skill.|Cost (per level): 10,15,20"
+
+[AbilityShieldStrength]
+AbilityName="Shields Up!"
+Description="Increases your maximum shield by 25 per level. You must have a Health Bonus stat of 100 before you can purchase this ability. (Max Level: 10)"
+
+[AbilitySmartHealing]
+AbilityName="Smart Healing"
+Description="Causes healing items to heal you an addition 25% per level. You need to have a Health Bonus stat of at least 50 and a Max Ammo stat of at least 25 to purchase this ability. (Max Level: 15)"
+
+[AbilitySpeed]
+AbilityName="Quickfoot"
+Description="Increases your speed in all environments by 5% per level. The Speed adrenaline combo will stack with this effect. You must be a Level equal to ten times the ability level you wish to have before you can purchase it. (Max Level: 4)"
+
+[AbilityUltima]
+AbilityName="Ultima"
+Description="This ability causes your body to release energy when you die. The energy will collect at a single point which will then cause a Redeemer-like nuclear explosion. Level 2 of this ability causes the energy to collect for the explosion in half the time. The ability will only trigger if you have killed at least one enemy during your life. You need to have a Damage Bonus stat of at least 250 to purchase this ability. You can't have both Ultima and Ghost at the same time. (Max Level: 20)"
+
+[AbilityVampire]
+AbilityName="Vampirism"
+Description="Whenever you damage another player, you are healed for 5% of the damage per level (up to your starting health amount + 50). You can't gain health from self-damage and you can't gain health from damage caused by the Retaliation ability. You must have a Damage Bonus of at least 50 to purchase this ability. (Max Level: 10)"
+
+[AbilityVehicleEject]
+AbilityName="Vehicle Ejector Button"
+Description="You will be automatically ejected from a destroyed vehicle. Depending upon your level of this skill, it will activate once every 120, 60, 40, or 30 seconds.|(Max Level: 1, Max Engineer Level: 4)|Cost (per level): 5,10,15,20"
+
+[AbilityWeaponsProficiency]
+AbilityName="ÿWeapons Proficiency"
+Description="Tracks the kills per weapon, and adds extra damage the more you kill|Required Level: 100 |Cost: 25,30,35,40|Max Level: 4"
+
+[AbilityWheeledVehicleStunts]
+AbilityName="Stunt Vehicles"
+Description="With this skill, you can make wheeled vehicles jump.|Hold down the crouch key to charge up and then release to jump.|This ability also grants control of wheeled vehicles in mid-air.|Additional levels provide more spin, momentum, and less charge time.|(Max Level 1. Max Level Engineer 3.)|Cost (per level): 5,10,15"
+
+[AdrenConditionMessage]
+AdrenMessage="has given you adrenaline!"
+
+[ArtifactDoubleModifier]
+ItemName="Double Modifier"
+
+[ArtifactFlight]
+NotInVehicleMessage="Sorry, vehicles can't wear boots."
+ItemName="Boots of Flight"
+
+[ArtifactFlightPickup]
+PickupMessage="You got the Boots of Flight!"
+
+[ArtifactFreezeBomb]
+ItemName="FreezeBomb"
+
+[ArtifactFreezeBombPickup]
+PickupMessage="You got the FreezeBomb!"
+
+[ArtifactGodlyness]
+NotInVehicleMessage="Umm were sorry, but vehicles can't become godly."
+ItemName="Godlyness"
+
+[ArtifactGodlynessPickup]
+PickupMessage="You found the Gift of the Gods"
+
+[ArtifactHeal]
+NotInVehicleMessage="Sorry, you can't cast spells from inside a vehicle."
+ItemName="Healing Spell"
+
+[ArtifactHealConditionMessage]
+HealedMessage="has healed you with the Healing Spell"
+
+[ArtifactHealingBlast]
+ItemName="HealingBlast"
+
+[ArtifactHealingBlastPickup]
+PickupMessage="You got the Healing Bomb!"
+
+[ArtifactInvulnerability]
+ItemName="Globe of Invulnerability"
+
+[ArtifactInvulnerabilityPickup]
+PickupMessage="You got the Globe of Invulnerability!"
+
+[ArtifactKillAllBuildings]
+ItemName="Kill All Summoned Buildings"
+
+[ArtifactKillAllPets]
+ItemName="Kill All Summoned Monsters"
+
+[ArtifactKillAllSentinels]
+ItemName="Kill All Summoned Sentinels"
+
+[ArtifactKillAllTurrets]
+ItemName="Kill All Summoned Turrets"
+
+[ArtifactKillAllVehicles]
+ItemName="Kill All Summoned Vehicles"
+
+[ArtifactKillOnePet]
+ItemName="Kill Oldest Summoned Monster"
+
+[ArtifactLightningBeam]
+ItemName="Lightning Beam"
+
+[ArtifactLightningBeamPickup]
+PickupMessage="You got the Lightning Beam!"
+
+[ArtifactLightningBolt]
+ItemName="Lightning Bolt"
+
+[ArtifactLightningBoltPickup]
+PickupMessage="You got the Lightning Bolt!"
+
+[ArtifactLightningRod]
+ItemName="Lightning Rod"
+
+[ArtifactLightningRodPickup]
+PickupMessage="You got the Lightning Rod!"
+
+[ArtifactMakeAdren]
+ItemName="Infinity Adren Maker"
+
+[ArtifactMakeDamage]
+ItemName="Damage Maker"
+
+[ArtifactMakeEnergy]
+ItemName="Energy Maker"
+
+[ArtifactMakeExperience]
+ItemName="Experience Maker"
+
+[ArtifactMakeForce]
+ItemName="Force Maker"
+
+[ArtifactMakeFreeze]
+ItemName="Freeze Maker"
+
+[ArtifactMakeInfinity]
+ItemName="Infinity Maker"
+
+[ArtifactMakeKnockback]
+ItemName="Knockback Maker"
+
+[ArtifactMakeLuck]
+ItemName="Lucky Maker"
+
+[ArtifactMakePenetrating]
+ItemName="Penetration Maker"
+
+[ArtifactMakePetrification]
+ItemName="Petrification Maker"
+
+[ArtifactMakePiercing]
+ItemName="Piercing Maker"
+
+[ArtifactMakePoison]
+ItemName="Poison Maker"
+
+[ArtifactMakeSpeedy]
+ItemName="Quickfoot Maker"
+
+[ArtifactMakeSturdy]
+ItemName="Sturdy Maker"
+
+[ArtifactMakeSuperHealer]
+ItemName="Medic Weapon Maker"
+
+[ArtifactMakeVampire]
+ItemName="Vampire Maker"
+
+[ArtifactMakeVorpal]
+ItemName="Vorpal Maker"
+
+[ArtifactMegaBlast]
+ItemName="MegaBlast"
+
+[ArtifactMegaBlastPickup]
+PickupMessage="You got the MegaBlast!"
+
+[ArtifactMonsterSummon]
+TooManyMonstersMessage="The Summoning Charm cannot support any more monsters in this world."
+ItemName="Summoning Charm"
+
+[ArtifactMonsterSummonPickup]
+PickupMessage="You got the Summoning Charm!"
+
+[ArtifactPoisonBlast]
+ItemName="PoisonBlast"
+
+[ArtifactPoisonBlastPickup]
+PickupMessage="You got the PoisonBlast!"
+
+[ArtifactRemoteDamage]
+ItemName="Remote Extra Damage"
+
+[ArtifactRemoteInvulnerability]
+ItemName="Remote Invulnerability"
+
+[ArtifactRemoteMax]
+ItemName="Remote Max Modifier"
+
+[ArtifactRepulsion]
+ItemName="Repulsion"
+
+[ArtifactRepulsionPickup]
+PickupMessage="You got the Repulsion Artifact!"
+
+[ArtifactResurrection]
+ItemName="Resurrection"
+
+[ArtifactResurrectionPickup]
+PickupMessage="You got the Resurrection Artifact!"
+
+[ArtifactShieldBlast]
+ItemName="ShieldBlast"
+
+[ArtifactShieldBlastPickup]
+PickupMessage="You got the Shield Healing Bomb!"
+
+[ArtifactSphereDamage]
+ItemName="Damage Sphere"
+
+[ArtifactSphereDamagePickup]
+PickupMessage="You got the Sphere of Damage!"
+
+[ArtifactSphereHealing]
+ItemName="Healing Sphere"
+
+[ArtifactSphereHealingPickup]
+PickupMessage="You got the Sphere of Healing!"
+
+[ArtifactSphereInvulnerability]
+ItemName="Invulnerability Sphere"
+
+[ArtifactSphereInvulnerabilityPickup]
+PickupMessage="You got the Sphere of Invulnerabilty!"
+
+[ArtifactSpider]
+NotInVehicleMessage="Sorry, vehicles can't use an Electro-Magnet around."
+ItemName="Electro-Magnet"
+
+[ArtifactSpiderPickup]
+PickupMessage="You got the Electro-Magnet!"
+
+[ArtifactSuperMakeMagicWeapon]
+ItemName="Super Magic Weapon Maker"
+
+[ArtifactSuperMakeMagicWeaponPickup]
+PickupMessage="You got the Super Magic Weapon Maker!"
+
+[ArtifactTeleport]
+ItemName="Teleporter"
+
+[ArtifactTeleportPickup]
+PickupMessage="You got the Teleporter!"
+
+[ArtifactTripleDamage]
+ItemName="Triple Damage"
+
+[ArtifactTripleDamagePickup]
+PickupMessage="You got the Triple Damage!"
+
+[Artifact_GlobeInvulnerability]
+ItemName="Globe of Invulnerability"
+
+[Artifact_GlobeInvulnerabilityPickup]
+PickupMessage="You got the Globe of Invulnerability!"
+
+[ClassAdrenalineMaster]
+AbilityName="Class: Adrenaline Master"
+Description="This class is the prerequisite for all adrenaline related abilities.|You can not be more than one class at any time."
+
+[ClassEngineer]
+AbilityName="Class: Engineer"
+Description="This class is the prerequisite for all engineer related abilities.|You can not be more than one class at any time."
+
+[ClassMonsterMaster]
+AbilityName="Class: Monster/Medic Master"
+Description="This class is the prerequisite for all monster and healing related abilities.|You can not be more than one class at any time."
+
+[ClassWeaponsMaster]
+AbilityName="Class: Weapons Master"
+Description="This class is the prerequisite for all weapon related abilities.|You can not be more than one class at any time."
+
+[CostRPGAbility]
+AbilityName="Costed RPG Ability"
+
+[DamTypeDruidBallTurret]
+DeathString="%o was served an extra helping of %k's plasma."
+FemaleSuicide="%o fried herself with her own plasma blast."
+MaleSuicide="%o fried himself with his own plasma blast."
+
+[DamTypeEnergyWall]
+DeathString="%o was SIZZLED by the power of %k's wall!"
+FemaleSuicide="%o was SIZZLED!"
+MaleSuicide="%o was SIZZLED!"
+
+[DamTypeLightningBolt]
+DeathString="%o was electrocuted by %k's lightning bolt."
+FemaleSuicide="%o had an electrifying experience."
+MaleSuicide="%o had an electrifying experience."
+
+[DamTypeLightningRod]
+DeathString="%o was electrocuted by %k's lightning rod."
+FemaleSuicide="%o had an electrifying experience."
+MaleSuicide="%o had an electrifying experience."
+
+[DamTypeMegaExplosion]
+DeathString="%o was PULVERIZED by the power of %k's blast!"
+FemaleSuicide="%o was PULVERIZED!"
+MaleSuicide="%o was PULVERIZED!"
+
+[DamTypePoison]
+DeathString="%o couldn't find an antidote for %k's poison."
+FemaleSuicide="%o poisoned herself."
+MaleSuicide="%o poisoned himself."
+
+[DamTypeRetaliation]
+DeathString="%k's strike back was too much for %o."
+
+[DamTypeUltima]
+DeathString="%o was PULVERIZED by the power of %k's vengeance!"
+FemaleSuicide="%o was PULVERIZED!"
+MaleSuicide="%o was PULVERIZED!"
+
+[DamageConditionMessage]
+DamageMessage="You now have increased damage!"
+MadeDamageMessage="has granted you increased damage!"
+NoDamageMessage="Your increased damage has worn off!"
+
+[DruidAdrenalineRegen]
+Description="Slowly drips adrenaline into your system.|At level 1 you get one adrenaline every 3 seconds.|At level 2 you get one adrenaline every 2 seconds.|At level 3 you get one adrenaline every second.|You must spend 25 points in your Adrenaline Max stat for each level of this ability you want to purchase. (Max Level: 3)|You must be an Adrenaline Master or a Monster Master to purchase this skill.|Cost (per level): 2,8,14"
+
+[DruidAdrenalineSurge]
+Description="For each level of this ability, you gain 50% more adrenaline from all kill related adrenaline bonuses. You must have a Damage Bonus of at least 50 and an Adrenaline Max stat at least 150 to purchase this ability. (Max Level: 2) You must be an Adrenaline Master to purchase this skill.|Cost (per level): 2,8"
+
+[DruidAmmoRegen]
+Description="Adds 1 ammo per level to each ammo type you own every 3 seconds. Does not give ammo to superweapons or the translocator. You must have a Max Ammo stat of at least 50 to purchase this ability. (Max Level: 4)|You must be a Weapons Master or Adrenaline Master to purchase this skill."
+
+[DruidArmorRegen]
+AbilityName="Armor Regeneration"
+Description="Heals 1 armor per second per level. Does not heal past starting armor amount. You must have a Health Bonus stat equal to 30 times the ability level you wish to have before you can purchase it. (Max Level: 5) You must be an Engineer to purchase this skill.|Cost (per level): 15,20,25,30,35"
+
+[DruidArmorVampire]
+AbilityName="Armor Vampirism"
+Description="Whenever you damage another player from a vehicle or turret, it is healed for 3% of the damage per level (up to its starting health amount). You must have a Damage Bonus of at least 50 to purchase this ability. (Max Level: 10) You must be an Engineer to purchase this skill.|Cost (per level): 10,15,20,25,30,35,40,45,50,55"
+
+[DruidArtifactLoaded]
+AbilityName="Loaded Artifacts"
+Description="When you spawn:|Level 1: You are granted all slow drain artifacts and a magic weapon maker.|Level 2: You are granted all fast drain artifacts and some special artifacts.|Level 3: Your breakable artifacts are made unbreakable, and you get some extra artifacts.|Level 4: You get team artifacts. You must be an Adrenaline Master to purchase this skill.|Cost (per level): 2,9,16,9"
+
+[DruidArtifactMakeMagicWeapon]
+ItemName="Magic Weapon Maker"
+
+[DruidArtifactMakeMagicWeaponPickup]
+PickupMessage="You got the artifact to make magic weapons!"
+
+[DruidArtifactMonsterSummon]
+ItemName="Summoning Charm"
+
+[DruidArtifactSpider]
+NotInVehicleMessage="Sorry, vehicles can't use an Electro-Magnet around."
+ItemName="Electro-Magnet"
+
+[DruidAwareness]
+Description="Informs you of your enemies' health with a display over their heads. At level 1 you get a small, dully-colored indicator (green, yellow, or red). At level 2 you get a larger colored health bar and a shield bar. You must be an Adrenaline Master or Weapons Master, and have at least 5 points in every stat to purchase this ability. (Max Level: 2)|Cost (per level): 20,25"
+
+[DruidBallTurret]
+VehicleNameString="Ball Turret"
+
+[DruidBallWeapon]
+ItemName="Turret weapon"
+
+[DruidBuildingSummon]
+ItemName="Building"
+
+[DruidCeilingDefenseSentinel]
+VehicleNameString="Ceiling Defense Sentinel"
+
+[DruidCeilingLightningSentinel]
+VehicleNameString="Ceiling LightSentinel"
+
+[DruidDefenseSentinel]
+VehicleNameString="Defense Sentinel"
+
+[DruidDoubleModifier]
+ItemName="Double Magic Modifier"
+
+[DruidEnergyVampire]
+AbilityName="Energy Leech"
+Description="Whenever you damage another player, you gain 1% of the damage as adrenaline. Each level increases this by 1%. (Max Level: 5) You must be an Adrenaline Master to purchase this skill.|Cost (per level): 2,8,14,20,26"
+
+[DruidEnergyWall]
+VehicleNameString="Energy Wall"
+
+[DruidGhost]
+AbilityName="Ghost"
+Description="The first time each spawn that you take damage that would kill you, instead of dying you will become non-corporeal and move to a new location, where you will continue your life. At level 1 you will move slowly as a ghost and return with a health of 1. At level 2 you will move somewhat more quickly and will return with 100 health. At level 3 you will move fastest and will return with your normal starting health. You need to have at least 200 Health Bonus and 50 Damage Reduction to purchase this ability. (Max Level: 3)|Cost (per level): 40,25,20"
+
+[DruidLightningSentinel]
+VehicleNameString="Lightning Sentinel"
+
+[DruidLoaded]
+AbilityName="Loaded Weapons"
+Description="When you spawn:|Level 1: You are granted all regular weapons with the default percentage chance for magic weapons.|Level 2: You are granted onslaught weapons and all weapons with max ammo.|Level 3: You are granted super weapons (Invasion game types only).|Level 4: Magic weapons will be generated for all your weapons.|Level 5: You receive all positive magic weapons.|You must be a Weapons Master to purchase this skill.|You must be level 40 before you can buy level 2 and level 55 before you can buy level 3.|Cost (per level): 10,15,20,25,30"
+
+[DruidMaxModifier]
+ItemName="Max Magic Modifier"
+
+[DruidMonsterMasterArtifactMonsterSummon]
+ItemName="Monster Summon"
+
+[DruidNoWeaponDrop]
+AbilityName="Denial"
+Description="The first level of this ability simply prevents you from dropping a weapon when you die (but you don't get it either). The second level allows you to respawn with the weapon and ammo you were using when you died. If you are an Adrenaline Master you may buy Level 3, which will save all your weapons when you die. You need to be at least Level 25 to purchase this ability. (Max Level: 2 or 3)|This ability does not trigger for self-inflicted death.|You must be an Adrenaline Master or a Weapons Master to purchase this skill.|Cost (per level): 15,20,20"
+
+[DruidPlusOneModifier]
+ItemName="Magic Modifier Plus One"
+
+[DruidRegen]
+Description="Heals 1 health per second per level. Does not heal past starting health amount. You must have a Health Bonus stat equal to 30 times the ability level you wish to have before you can purchase it. (Max Level: 5) You must be a Weapons Master or a Monster Master to purchase this skill.|Cost (per level): 15,20,25,30,35"
+
+[DruidSentinelSummon]
+ItemName="Sentinel"
+
+[DruidShieldRegen]
+AbilityName="Shield Regeneration"
+Description="Regenerates your shield at 0.5 per level per second, minimum one, provided you haven't suffered damage recently. Does not regenerate past starting shield amount. (Max level 15) You must be an Engineer to purchase this skill.|Cost (per level): 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4"
+
+[DruidSpiderPickup]
+PickupMessage="You got the Electro-Magnet!"
+
+[DruidTurretSummon]
+ItemName="Turret"
+
+[DruidUltima]
+AbilityName="Ultima"
+Description="This ability causes your body to release energy when you die. The energy will collect at a single point which will then cause a Redeemer-like nuclear explosion. Level 2 of this ability causes the energy to collect for the explosion in half the time. The ability will only trigger if you have killed at least one enemy during your life. You need to have a Damage Bonus stat of at least 80 to purchase this ability. (Max Level: 20)|Cost (per level): 50,50"
+
+[DruidVampire]
+Description="Whenever you damage an opponent, you are healed for 5% of the damage per level (up to your starting health amount + 50). You can't gain health from self-damage and you can't gain health from damage caused by the Retaliation ability. You must have a Damage Bonus of at least 50 to purchase this ability. (Max Level: 10) You must be a Weapons Master to purchase this skill.|Cost (per level): 10,15,20,25,30,35,40,45,50"
+
+[DruidVehicleSummon]
+ItemName="Vehicle"
+
+[DruidsRPGKeysMut]
+FriendlyName="ÿfpsRPG Key Bindings"
+Description="Allow users to bind keys for selecting RPG Artifacts"
+
+[EngTransLauncher]
+ItemName="Engineer's Translocator"
+
+[EngineerInteraction]
+PointsText="Points:"
+
+[EngineerPointsInv]
+NotEnoughPointsMessage="Insufficent points available to summon this."
+UnableToSpawnMessage="Unable to spawn."
+TooManyToSpawnMessage="You have summoned too many of these. You must kill one before you can summon another one."
+NotAtLevel="You need to be a higher level to spawn one of these"
+TooManyExtra="You cannot spawn this many extra items"
+
+[ExperiencePickup]
+PickupMessage="Experience +"
+
+[FreezeConditionMessage]
+FreezeMessage="You are frozen"
+
+[GainLevelMessage]
+LevelString=" is now Level "
+SomeoneString=" someone "
+
+[HealShieldConditionMessage]
+HealShieldMessage="has boosted your shield"
+
+[HealedConditionMessage]
+HealedMessage="has healed you"
+
+[IdentifyMessage]
+IdentifyString="Your weapon is a"
+PickupString="You got the"
+
+[InvulnerableConditionMessage]
+InvulnerableMessage="You are now Invulnerable!"
+MadeInvulnerableMessage="has made you invulnerable!"
+UnInvulnerableMessage="Your Invulnerability has worn off!"
+
+[KnockbackConditionMessage]
+KnockbackMessage="Knockback"
+
+[LevelUpHUDMessage]
+LevelUpString="You have stat points to distribute!"
+PressLString="(Press L)"
+
+[LimitBreakInteraction]
+LimitText="Limit Points:"
+
+[MaxedConditionMessage]
+MaxedMessage="Your weapon has been maxed by"
+
+[MonsterMasterInteraction]
+MPText="Monster Points:"
+AdrenalineText="Adrenaline:"
+MonsterPointsText="Monster Points:"
+
+[MonsterPointsInv]
+NotEnoughAdrenalineMessage="You do not have enough adrenaline to summon this monster."
+NotEnoughMonsterPointsMessage="Insufficent monster points available to summon this monster."
+UnableToSpawnMonsterMessage="Unable to spawn monster."
+TooManyMonstersMessage="You have summoned too many monsters. You must kill one before you can summon another one."
+
+[MutDruidRPG]
+FriendlyName="ÿFPS RPG Game Rules"
+Description="Game rules specific to DruidsRPG."
+
+[MutDruidUpgrade]
+FriendlyName="ÿfps RPG Upgrader"
+Description="fps RPG Upgrade Mutator. Needed to upgrade old RPG Data"
+
+[MutRPGHUD]
+FriendlyName="ÿfps Invasion RPG HUD"
+Description="Show Friendly Monsters In HUD and show monsters on a danger scale from Green to Red. Also show xp gained on Invasion scoreboard."
+
+[MutfpsRPG]
+PropsDisplayText[0]="Autosave Interval (seconds)"
+PropsDisplayText[1]="Starting Level"
+PropsDisplayText[2]="Stat Points per Level"
+PropsDisplayText[3]="Divisor to EXP from Level Diff"
+PropsDisplayText[4]="EXP for Winning"
+PropsDisplayText[5]="Fake Bot Levels"
+PropsDisplayText[6]="Reset Player Data Next Game"
+PropsDisplayText[7]="Magic Weapon Chance"
+PropsDisplayText[8]="Magical Starting Weapons"
+PropsDisplayText[9]="No Unidentified Items"
+PropsDisplayText[10]="Auto Adjust Invasion Monster Level"
+PropsDisplayText[11]="Monster Adjustment Factor"
+PropsDisplayText[12]="Max Levelup Effects at Once"
+PropsDisplayText[13]="Stat Caps"
+PropsDisplayText[14]="Infinite Required EXP Operation"
+PropsDisplayText[15]="Infinite Required EXP Value"
+PropsDisplayText[16]="EXP Required for Each Level"
+PropsDisplayText[17]="Allowed Abilities"
+PropsDisplayText[18]="Ironman Mode"
+PropsDisplayText[19]="Use Official Redirect Server"
+PropsDisplayText[20]="Extra Bot Levelups After Match"
+PropsDisplayText[21]="Monsters Starting Level"
+PropsDescText[0]="During the game, all data will be saved every this many seconds."
+PropsDescText[1]="New players start at this Level."
+PropsDescText[2]="The number of stat points earned from a levelup."
+PropsDescText[3]="Lower values = more exp when killing someone of higher level."
+PropsDescText[4]="The EXP gained for winning a match."
+PropsDescText[5]="If checked, bots' data is not saved and instead they are simply given a level near that of the human player(s)."
+PropsDescText[6]="If checked, player data will be reset before the next match begins."
+PropsDescText[7]="Chance of any given weapon having magical properties."
+PropsDescText[8]="If checked, weapons given to players when they spawn can have magical properties."
+PropsDescText[9]="If checked, magical weapons will always be identified."
+PropsDescText[10]="If checked, Invasion monsters' level will be adjusted based on the lowest level player."
+PropsDescText[11]="Invasion monsters will be adjusted based on this fraction of the weakest player's level."
+PropsDescText[12]="The maximum number of levelup particle effects that can be spawned on a character at once."
+PropsDescText[13]="Limit on how high stats can go. Values less than 0 mean no limit. The stats are: 1: Weapon Speed 2: Health Bonus 3: Max Adrenaline 4: Damage Bonus 5: Damage Reduction 6: Max Ammo Bonus"
+PropsDescText[14]="Allows you to make the EXP required for the next level always increase, no matter how high a level you get. This option controls how it increases."
+PropsDescText[15]="Allows you to make the EXP required for the next level always increase, no matter how high a level you get. This option is the value for the previous option's operation."
+PropsDescText[16]="Change the EXP required for each level. Levels after the last in your list will use the last value in the list."
+PropsDescText[17]="Change the list of abilities players can choose from."
+PropsDescText[18]="If checked, only the winning player or team's data is saved - the losers lose the experience they gained that match."
+PropsDescText[19]="If checked, the server will redirect clients to a special official redirect server for fpsRPG files (all other files will continue to use the normal redirect server, if any)"
+PropsDescText[20]="If Fake Bot Levels is off, bots gain this many extra levels after a match because individual bots don't play often."
+PropsDescText[21]="Monsters start at this level"
+PropsExtras="0;Add Specified Value;1;Add Specified Percent"
+FriendlyName="ÿFails Per Second RPG"
+Description="UT2004RPG Hardly Modified for the Fails Per Second Invasion Server"
+
+[NullEntropyConditionMessage]
+NullEntropyMessage="Null Entropy"
+
+[PoisonBlastConditionMessage]
+PoisonBlastMessage="You have been poisoned!"
+
+[ProficiencyMessage]
+ProfMessage1="Your weapon"
+ProfMessage2="has a proficiency bonus of È+ "
+
+[RPGAbilityDescMenu]
+ButtonClose.Caption="Close"
+
+[RPGArtifact]
+NotEnoughAdrenalineMessage="You do not have enough adrenaline to activate this artifact."
+ExpireMessage="Your adrenaline has run out."
+
+[RPGArtifactManager]
+PropsDisplayText[0]="Max Artifacts"
+PropsDisplayText[1]="Artifact Spawn Delay"
+PropsDisplayText[2]="Max Artifacts a Player Can Hold"
+PropsDescText[0]="Maximum number of artifacts in the level at once."
+PropsDescText[1]="Spawn an artifact every this many seconds."
+PropsDescText[2]="The maximum number of artifacts a player can carry at once (0 for infinity)"
+
+[RPGDamageConditionMessage]
+PoisonMessage="You are poisioned!"
+
+[RPGInteraction]
+LevelText="Level:"
+StatsMenuText="Press L for stats/levelup menu"
+ArtifactText="U to use, brackets to switch"
+
+[RPGModifier]
+NotEnoughAdrenalineMessage="You do not have enough adrenaline to activate this artifact."
+ExpireMessage="Your adrenaline has run out."
+
+[RPGModifierManager]
+PropsDisplayText[0]="Max Artifacts"
+PropsDisplayText[1]="Artifact Spawn Delay"
+PropsDisplayText[2]="Max Artifacts a Player Can Hold"
+PropsDescText[0]="Maximum number of artifacts in the level at once."
+PropsDescText[1]="Spawn an artifact every this many seconds."
+PropsDescText[2]="The maximum number of artifacts a player can carry at once (0 for infinity)"
+
+[RPGNameMessage]
+ImposterString="Sorry, that name is already in use by someone who plays on this server."
+NoNameChangeString="Sorry, you can only change your name when you're dead."
+
+[RPGPlayerLevelsMenu]
+DefaultText="Receiving Player Levels from Server..."
+ButtonClose.Caption="Close"
+
+[RPGResetConfirmPage]
+NoButton.Caption="No"
+ResetDesc.Caption="Data reset is Permanent! You will lose all your levels!"
+ResetDesc2.Caption="Are you sure?"
+YesButton.Caption="Yes"
+
+[RPGStatsMenu]
+CurrentLevelText="Level:"
+MaxText="Max"
+CostText="Cost:"
+CantBuyText="Cant Buy"
+AbilitiesButton.Caption="Abilities"
+AbilityBuyButton.Caption="Buy"
+AbilityDescButton.Caption="Info"
+AbilityList.Hint="These are the abilities you can purchase with stat points."
+AdrenalineMaxButton.Caption="+"
+AdrenalineMaxSelect.Caption="Max Adrenaline"
+AmmoMaxButton.Caption="+"
+AttackButton.Caption="+"
+AttackSelect.Caption="Damage Bonus (0.1%)"
+CloseButton.Caption="Close"
+DefenseButton.Caption="+"
+DefenseSelect.Caption="Damage Reduction (0.1%)"
+EXPLabel.Caption="Experience:"
+HealthBonusButton.Caption="+"
+HealthBonusSelect.Caption="Health Bonus"
+LevelLabel.Caption="Level:"
+LevelsButton.Caption="Player Levels"
+MaxAmmoSelect.Caption="Max Ammo Bonus (%)"
+PointsAvailableSelect.Caption="Stat Points Available"
+ResetButton.Caption="Reset"
+ShieldMaxButton.Caption="+"
+ShieldMaxSelect.Caption="Max Shield Bonus"
+StatsButton.Caption="Stats"
+StoreButton.Caption="Store"
+WeaponSpeedButton.Caption="+"
+WeaponSpeedSelect.Caption="Weapon Speed Bonus (%)"
+
+[RW_Adren]
+PrefixPos="Infinity Adrenal "
+
+[RW_Damage]
+PostfixPos=" of extra damage"
+
+[RW_Energy]
+PostfixPos=" of Energy"
+PrefixNeg="Draining "
+
+[RW_EngineerLink]
+PrefixPos="Engineer "
+PrefixNeg="Engineer "
+
+[RW_EnhancedInfinity]
+PostfixPos=" of Infinity"
+PostfixNeg=" of Infinity"
+
+[RW_EnhancedPenetrating]
+PrefixNeg="Penetrating "
+
+[RW_EnhancedPiercing]
+PrefixNeg="Piercing "
+
+[RW_Experience]
+PostfixPos=" of Experience"
+
+[RW_Force]
+PostfixPos=" of Force"
+PostfixNeg=" of Slow Motion"
+
+[RW_Freeze]
+PrefixPos="Freezing "
+
+[RW_Healer]
+PrefixPos="Healing "
+
+[RW_Healing]
+PrefixPos="Healing "
+
+[RW_Infinity]
+PostfixPos=" of Infinity"
+PostfixNeg=" of Infinity"
+
+[RW_Knockback]
+PostfixPos=" of Knockback"
+
+[RW_Luck]
+PrefixPos="Lucky "
+PostfixNeg=" of Misfortune"
+
+[RW_NoMomentum]
+PrefixPos="Sturdy "
+PrefixNeg="Sturdy "
+
+[RW_NullEntropy]
+PrefixPos="Petrification "
+
+[RW_Penetrating]
+PrefixPos="Penetrating "
+
+[RW_Piercing]
+PrefixPos="Piercing "
+
+[RW_Poison]
+PrefixPos="Poisoned "
+
+[RW_Protection]
+PostfixPos=" of Protection"
+PostfixNeg=" of Harm"
+
+[RW_Rage]
+PostfixPos=" of Rage"
+
+[RW_Reflection]
+PrefixPos="Reflecting "
+
+[RW_Speedy]
+PostfixPos=" of Quickfoot"
+PostfixNeg=" of Slowfoot"
+
+[RW_SuperHealer]
+PrefixPos="Medic "
+PostfixPos=" of Infinity"
+
+[RW_Vampire]
+PrefixPos="Vampiric "
+
+[RW_Vorpal]
+PrefixPos="Vorpal "
+
+[ScoreFix]
+FriendlyName="Score Fix"
+Description="Changes scoring and RPG Points for various game types."
+
+[StoreMenuGUI]
+CostText="Cost: "
+AbilityBuyAButton.Caption="Buy"
+AbilityBuyButton.Caption="Buy"
+AbilityBuyMButton.Caption="Buy"
+ArtifactButton.Caption="Artifacts"
+ArtifactsListBox.Hint="Available artifacts you can purchase with credits."
+CloseButton.Caption="Close"
+ModifierButton.Caption="Modifiers"
+ModifiersListBox.Hint="Available Modifiers you can purchase with credits."
+MoneyLabel.Caption="Credits:"
+WeaponButton.Caption="Weapons"
+WeaponsListBox.Hint="Available weapons you can purchase with credits."
+
+[Summonifact]
+ItemName="Summoning Artifact"
+
+[WeaponBeam]
+ItemName="Lightning Beam"
+
+[WeaponBolt]
+ItemName="Lightning Bolt"
+
+[WeaponExplosive]
+ItemName="Explosives"
+
+[WeaponMegaBlast]
+ItemName="Mega Blast"
+
+[WeaponRod]
+ItemName="Lightning Rod"
+
+[WeaponUltima]
+ItemName="Ultima"
+
