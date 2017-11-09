@@ -1,3 +1,7 @@
+//applies weapon stats to each player's weapon and manages client<->server interaction
+//although attached to a player's Pawn so it can receive events from it, it is also the inventory of the
+//Controller for persistence. Just before the Pawn dies the RPGStatsInv is removed from its inventory chain
+//so it doesn't get destroyed, and is then reconnected to the Controller's new Pawn when it respawns.
 class RPGStatsInv extends Inventory
 	DependsOn(RPGPlayerDataObject);
 
@@ -15,7 +19,7 @@ var int ClientVersion; //sent from client to server so server knows client's ver
 var int Money;
 
 //Weapons Store Variable
-var array<Class<Weapon> > WeaponsList;
+var array <Class<Weapon> > WeaponsList;
 var array<int> WeaponCost;
 
 //Artifacts Store Variable
@@ -84,7 +88,6 @@ function GiveTo(pawn Other, optional Pickup Pickup)
 		if (S != None)
 			S.SetTimer(S.AmmoRegenTime, true);
 	}
-	ServerAddMoney(RPGMut.StartingMoney);
 
 	if (!bSentInitialData)
 	{
@@ -171,7 +174,7 @@ simulated function AdjustFireRate(Weapon W)
 	FireMode[1] = W.GetFireMode(1);
 	if (MinigunFire(FireMode[0]) != None) //minigun needs a hack because it fires differently than normal weapons
 	{
-		Modifier = 1.f + 0.001 * Data.WeaponSpeed;
+		Modifier = 1.f + 0.01 * Data.WeaponSpeed;
 		MinigunFire(FireMode[0]).BarrelRotationsPerSec = MinigunFire(FireMode[0]).default.BarrelRotationsPerSec * Modifier;
 		MinigunFire(FireMode[0]).FireRate = 1.f / (MinigunFire(FireMode[0]).RoundsPerRotation * MinigunFire(FireMode[0]).BarrelRotationsPerSec);
 		MinigunFire(FireMode[0]).MaxRollSpeed = 65536.f*MinigunFire(FireMode[0]).BarrelRotationsPerSec;
@@ -181,7 +184,7 @@ simulated function AdjustFireRate(Weapon W)
 	}
 	else if (!FireMode[0].IsA('TransFire') && !FireMode[0].IsA('BallShoot') && !FireMode[0].IsA('MeleeSwordFire'))
 	{
-		Modifier = 1.f + 0.001 * Data.WeaponSpeed;
+		Modifier = 1.f + 0.01 * Data.WeaponSpeed;
 		if (FireMode[0] != None)
 		{
 			if (ShieldFire(FireMode[0]) != None) //shieldgun primary needs a hack to do charging speedup
@@ -348,19 +351,19 @@ function ServerAddPointTo(int Amount, EStatType Stat)
 		case STAT_WSpeed:
 			if (RPGMut.StatCaps[0] >= 0 && RPGMut.StatCaps[0] - DataObject.WeaponSpeed < Amount)
 				Amount = RPGMut.StatCaps[0] - DataObject.WeaponSpeed;
-				DataObject.WeaponSpeed += Amount;
-				Data.WeaponSpeed = DataObject.WeaponSpeed;
+			DataObject.WeaponSpeed += Amount;
+			Data.WeaponSpeed = DataObject.WeaponSpeed;
 			break;
 		case STAT_HealthBonus:
 			if (RPGMut.StatCaps[1] >= 0 && RPGMut.StatCaps[1] - DataObject.HealthBonus < Amount * 2)
 				Amount = (RPGMut.StatCaps[1] - DataObject.HealthBonus) / 2;
-				DataObject.HealthBonus += 2 * Amount;
-				Data.HealthBonus = DataObject.HealthBonus;
-				if (Instigator != None)
-				{
-					Instigator.HealthMax += 2 * Amount;
-					Instigator.SuperHealthMax += 2 * Amount;
-				}
+			DataObject.HealthBonus += 2 * Amount;
+			Data.HealthBonus = DataObject.HealthBonus;
+			if (Instigator != None)
+			{
+				Instigator.HealthMax += 2 * Amount;
+				Instigator.SuperHealthMax += 2 * Amount;
+			}
 			break;
 		case STAT_ShieldMax:
 			if (RPGMut.StatCaps[2] >= 0 && RPGMut.StatCaps[2] - DataObject.ShieldMax < Amount)
@@ -375,30 +378,28 @@ function ServerAddPointTo(int Amount, EStatType Stat)
 		case STAT_AdrenalineMax:
 			if (RPGMut.StatCaps[3] >= 0 && RPGMut.StatCaps[3] - DataObject.AdrenalineMax < Amount)
 				Amount = RPGMut.StatCaps[3] - DataObject.AdrenalineMax;
-				DataObject.AdrenalineMax += Amount;
-				Data.AdrenalineMax = DataObject.AdrenalineMax;
-				if (Instigator != None && Instigator.Controller != None)
-				{
-					Instigator.Controller.AdrenalineMax += Amount;
-				}
+			DataObject.AdrenalineMax += Amount;
+			Data.AdrenalineMax = DataObject.AdrenalineMax;
+			if (Instigator != None && Instigator.Controller != None)
+				Instigator.Controller.AdrenalineMax += Amount;
 			break;
 		case STAT_Attack:
 			if (RPGMut.StatCaps[4] >= 0 && RPGMut.StatCaps[4] - DataObject.Attack < Amount)
 				Amount = RPGMut.StatCaps[4] - DataObject.Attack;
-				DataObject.Attack += Amount;
-				Data.Attack = DataObject.Attack;
+			DataObject.Attack += Amount;
+			Data.Attack = DataObject.Attack;
 			break;
 		case STAT_Defense:
 			if (RPGMut.StatCaps[5] >= 0 && RPGMut.StatCaps[5] - DataObject.Defense < Amount)
 				Amount = RPGMut.StatCaps[5] - DataObject.Defense;
-				DataObject.Defense += Amount;
-				Data.Defense = DataObject.Defense;
+			DataObject.Defense += Amount;
+			Data.Defense = DataObject.Defense;
 			break;
 		case STAT_AmmoMax:
 			if (RPGMut.StatCaps[6] >= 0 && RPGMut.StatCaps[6] - DataObject.AmmoMax < Amount)
 				Amount = RPGMut.StatCaps[6] - DataObject.AmmoMax;
-				DataObject.AmmoMax += Amount;
-				Data.AmmoMax = DataObject.AmmoMax;
+			DataObject.AmmoMax += Amount;
+			Data.AmmoMax = DataObject.AmmoMax;
 			break;
 	}
 	DataObject.PointsAvailable -= Amount;
@@ -745,7 +746,7 @@ function ServerResetData(PlayerReplicationInfo PRI)
 		DataObject.Level = RPGMut.StartingLevel;
 		DataObject.PointsAvailable = RPGMut.PointsPerLevel * (RPGMut.StartingLevel - 1);
 		DataObject.AdrenalineMax = 100;
-		DataObject.ShieldMax = 150;
+		DataObject.ShieldMax = 0;
 		if (RPGMut.Levels.length > RPGMut.StartingLevel)
 			DataObject.NeededExp = RPGMut.Levels[RPGMut.StartingLevel];
 		else if (RPGMut.InfiniteReqEXPValue != 0)

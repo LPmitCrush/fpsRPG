@@ -64,7 +64,7 @@ static function bool PreventSever(Pawn Killed, name boneName, int Damage, class<
 
 defaultproperties
 {
-     AbilityName="Ghost"
+     AbilityName="янGhost"
      Description="The first time you take damage that would kill you, instead of dying you will become non-corporeal and move to a new location, where you will continue your life. At level 1 you will move slowly as a ghost and return with a health of 1. At level 2 you will move somewhat more quickly and will return with 100 health. At level 3 you will move fastest and will return with your normal starting health.|At level 4 if you have your translocation beacon set, you will move towards it.|Level 5 Instant teleport to your trans beacon if its set, if you do not have it set you will get a random teleport.|You need to have at least 200 Health Bonus and 100 Damage Reduction to purchase this ability. You can't have both Ghost and Ultima at the same time. (Max Level: 5)"
      StartingCost=25
      CostAddPerLevel=10

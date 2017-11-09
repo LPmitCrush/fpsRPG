@@ -19,7 +19,7 @@ function Tick(float deltaTime)
 	}
 
 	if ( Level.Game.GameRulesModifiers == None )
-		warn("Warning: There is no FPSRPG Loaded. DruidsRPG cannot function.");
+		warn("Warning: There is no fpsRPG Loaded. DruidsRPG cannot function.");
 	else
 	{
 		for(G = Level.Game.GameRulesModifiers; G != None; G = G.NextGameRules)
@@ -30,7 +30,7 @@ function Tick(float deltaTime)
 			{
 				if(rules == None)
 				{
-					warn("Warning: There is no FPSRPG Loaded. DruidsRPG cannot function.");
+					warn("Warning: There is no fpsRPG Loaded. DruidsRPG cannot function.");
 					return;
 				}
 				Level.Game.GameRulesModifiers.AddGameRules(spawn(class'DruidRPGGameRules'));
@@ -43,7 +43,7 @@ function Tick(float deltaTime)
 
 defaultproperties
 {
-     GroupName="fpsRPG"
-     FriendlyName="ÿFPS RPG Game Rules"
+     GroupName="DruidsRPG"
+     FriendlyName="Fails Per Second GameRules"
      Description="Game rules specific to DruidsRPG."
 }

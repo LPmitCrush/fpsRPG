@@ -14,7 +14,7 @@ var float AIRatingBonus;
 var localized string PrefixPos, PostfixPos, PrefixNeg, PostfixNeg;
 var bool bCanHaveZeroModifier;
 var bool bIdentified;
-var int References; //number of UT2004RPG actors referencing this actor
+var int References; //number of fpsRPG actors referencing this actor
 var int SniperZoomMode; //sniper zoom hack
 var RPGStatsInv HolderStatsInv;
 var int LastAmmoChargePrimary; //used to sync up AmmoCharge between multiple RPGWeapons modifying the same class of weapon

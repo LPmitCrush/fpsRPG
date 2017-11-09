@@ -30,9 +30,9 @@ static simulated function ModifyPawn(Pawn Other, int AbilityLevel)
 
 defaultproperties
 {
-     AbilityName="Resupply"
-     Description="Adds 1 ammo per level to each ammo type you own every 3 seconds. Does not give ammo to superweapons or the translocator. You must have a Max Ammo stat of at least 50 to purchase this ability. (Max Level: 8)"
+     AbilityName="ÿÍResupply"
+     Description="Adds 1 ammo per level to each ammo type you own every 3 seconds. Does not give ammo to superweapons or the translocator. You must have a Max Ammo stat of at least 50 to purchase this ability. (Max Level: 20)"
      StartingCost=15
      CostAddPerLevel=5
-     MaxLevel=8
+     MaxLevel=20
 }

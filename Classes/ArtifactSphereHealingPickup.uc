@@ -10,6 +10,6 @@ defaultproperties
      StaticMesh=StaticMesh'Editor.TexPropSphere'
      bAcceptsProjectors=False
      DrawScale=0.075000
-     Skins(0)=Shader'fpsRPGTex.DomShaders.PulseBlueShader'
+     Skins(0)=Shader'fpsRPGTex.Overlays.PulseBlueShader'
      AmbientGlow=255
 }

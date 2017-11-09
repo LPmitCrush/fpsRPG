@@ -28,7 +28,7 @@ static function HandleDamage(int Damage, Pawn Injured, Pawn Instigator, out vect
 
 defaultproperties
 {
-     AbilityName="Vampirism"
+     AbilityName="ÿßVampirism"
      Description="Whenever you damage another player, you are healed for 5% of the damage per level (up to your starting health amount + 50). You can't gain health from self-damage and you can't gain health from damage caused by the Retaliation ability. You must have a Damage Bonus of at least 50 to purchase this ability. (Max Level: 10)"
      StartingCost=10
      CostAddPerLevel=5

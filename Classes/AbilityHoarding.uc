@@ -41,7 +41,7 @@ static function bool OverridePickupQuery(Pawn Other, Pickup item, out byte bAllo
 
 defaultproperties
 {
-     AbilityName="Hoarding"
+     AbilityName="ÿÓHoarding"
      Description="Allows you to pick up items even if you don't need them. You need to have at least 50 points in every stat to purchase this ability. (Max Level: 1)"
      StartingCost=25
      CostAddPerLevel=5

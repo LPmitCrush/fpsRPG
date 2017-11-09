@@ -38,7 +38,7 @@ static simulated function ModifyWeapon(Weapon Weapon, int AbilityLevel)
 
 defaultproperties
 {
-     AbilityName="Speed Switcher"
+     AbilityName="ÿGSpeed Switcher"
      Description="For each level of this ability, you switch weapons 50% faster. You need to have at least 50 Weapon Speed before you can purchase this ability. (Max Level: 6)"
      StartingCost=15
      CostAddPerLevel=5

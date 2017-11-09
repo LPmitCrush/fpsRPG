@@ -24,6 +24,6 @@ defaultproperties
 {
      Upgrader=Class'fpsRPG.DruidUpgradeInv'
      GroupName="DruidsRPGUpgradeMutator"
-     FriendlyName="ÿfps RPG Upgrader"
-     Description="fps RPG Upgrade Mutator. Needed to upgrade old RPG Data"
+     FriendlyName="Fails Per Second Upgrade"
+     Description="Druid's RPG Upgrade Mutator. Needed to upgrade old RPG Data"
 }

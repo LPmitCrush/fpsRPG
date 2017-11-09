@@ -8,23 +8,11 @@ var config float MaxIncrease;
 
 static simulated function int Cost(RPGPlayerDataObject Data, int CurrentLevel)
 {
-	local int x;
-	local bool ok;
-
-	for (x = 0; x < Data.Abilities.length && !ok; x++)
-		if (Data.Abilities[x] == class'ClassWeaponsMaster')
-			ok = true;
-	if(!ok)
-	{
-		if(CurrentLevel > 0)
-			log("Warning:"@data.Name@"has"@default.class@"Level"@CurrentLevel@"but does not have an associated Class to allow them to purchase it");
+	if (Data.WeaponSpeed < 150 || Data.HealthBonus < 150 || Data.ShieldMax < 150 
+	|| Data.AdrenalineMax < 150 || Data.Attack < 150 || Data.Defense < 150 || Data.AmmoMax < 150)
 		return 0;
-	}
-	
-	if(Data.Level < (default.RequiredLevel + CurrentLevel))
-		return 0;
-
-	return Super.Cost(Data, CurrentLevel);
+	else
+		return Super.Cost(Data, CurrentLevel);
 }
 
 static function GetNumKillsForWeapon(out float incPerc, class<Weapon> WeaponClass, TeamPlayerReplicationInfo TPPI, int AbilityLevel)
@@ -112,8 +100,8 @@ defaultproperties
      RequiredLevel=100
      LevMultiplier=0.010000
      MaxIncrease=1.000000
-     AbilityName="ÿWeapons Proficiency"
-     Description="Tracks the kills per weapon, and adds extra damage the more you kill|Required Level: 100 |Cost: 25,30,35,40|Max Level: 4"
+     AbilityName="ÿ9Weapons Proficiency"
+     Description="Tracks the kills per weapon, and adds extra damage the more you kill.|You need atleast 150 in every stat to purchase this Ability.|Required Level: 100 |Cost: 25,30,35,40|Max Level: 4"
      StartingCost=25
      CostAddPerLevel=5
      MaxLevel=4

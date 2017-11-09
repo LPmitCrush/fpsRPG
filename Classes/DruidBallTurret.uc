@@ -25,7 +25,7 @@ simulated event PostBeginPlay()
 		for (m = Level.Game.BaseMutator; m != None; m = m.NextMutator)
 			if (MutfpsRPG(m) != None)
 			{
-				RPGMut = MutfpsRPG(M);
+				RPGMut = MutfpsRPG(m);
 				break;
 			}
 			
@@ -76,7 +76,7 @@ function bool HealDamage(int Amount, Controller Healer, class<DamageType> Damage
 		for (m = Level.Game.BaseMutator; m != None; m = m.NextMutator)
 			if (MutfpsRPG(m) != None)
 			{
-				RPGMut = MutfpsRPG(M);
+				RPGMut = MutfpsRPG(m);
 				break;
 			}
 	}
@@ -153,7 +153,7 @@ defaultproperties
      CamAbsLocation=(Z=50.000000)
      CamRelLocation=(X=100.000000,Z=50.000000)
      CamDistance=(X=-400.000000,Z=50.000000)
-     DefaultWeaponClassName="DruidBallWeapon"
+     DefaultWeaponClassName=""
      bRelativeExitPos=True
      ExitPositions(0)=(Y=100.000000,Z=100.000000)
      ExitPositions(1)=(Y=-100.000000,Z=100.000000)

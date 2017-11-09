@@ -87,7 +87,7 @@ static function HandleDamage(int Damage, Pawn Injured, Pawn Instigator, out vect
 
 defaultproperties
 {
-     AbilityName="Limit Break"
+     AbilityName="ÿ³Limit Break"
      Description="As you play, you earn limit points when you are damaged by the enemy. You earn less points for damage when you are a higher level and when you have more health. After earning a Limit Break, once you fall to critical health, you will unleash a very powerfull maneuver.|Cost (per level): 7, 14, 21"
      StartingCost=7
      CostAddPerLevel=7

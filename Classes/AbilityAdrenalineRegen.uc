@@ -30,7 +30,7 @@ static simulated function ModifyPawn(Pawn Other, int AbilityLevel)
 
 defaultproperties
 {
-     AbilityName="Adrenal Drip"
+     AbilityName="ÿaAdrenal Drip"
      Description="Gives 1 adrenaline per 5 seconds per level. Does not give adrenaline while performing a combo or using an artifact. You must have spent 25 points in your Adrenaline Max stat for each level of this ability you want to purchase. (Max Level: 100)"
      StartingCost=20
      CostAddPerLevel=5

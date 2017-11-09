@@ -22,7 +22,7 @@ simulated event PostBeginPlay()
 		for (m = Level.Game.BaseMutator; m != None; m = m.NextMutator)
 			if (MutfpsRPG(m) != None)
 			{
-				RPGMut = MutfpsRPG(M);
+				RPGMut = MutfpsRPG(m);
 				break;
 			}
 	
@@ -74,7 +74,7 @@ function bool HealDamage(int Amount, Controller Healer, class<DamageType> Damage
 		for (m = Level.Game.BaseMutator; m != None; m = m.NextMutator)
 			if (MutfpsRPG(m) != None)
 			{
-				RPGMut = MutfpsRPG(M);
+				RPGMut = MutfpsRPG(m);
 				break;
 			}
 	}

@@ -36,7 +36,7 @@ static simulated function ModifyPawn(Pawn Other, int AbilityLevel)
 
 defaultproperties
 {
-     AbilityName="Awareness"
+     AbilityName="ÿ¿Awareness"
      Description="Informs you of your enemies' health with a display over their heads. At level 1 you get a colored indicator (green, yellow, or red)|level 2: you get a colored health bar and a shield bar|Level 3: Shows you the monsters health in numbers (above their head)|You need atleast 10 points into all stats to buy this ability"
      StartingCost=15
      CostAddPerLevel=5

@@ -1,10 +1,7 @@
-#exec OBJ LOAD FILE=fpsRPGTex.utx
-#exec OBJ LOAD FILE=fpsRPGMesh.usx
-
 class MutfpsRPG extends Mutator
 	config(fpsRPG);
 
-const RPG_VERSION = 1;
+const RPG_VERSION = 22;
 
 var config int SaveDuringGameInterval; //periodically save during game - to avoid losing data from game crash or server kill
 var config int StartingLevel; //starting level - cannot be less than 1
@@ -238,7 +235,7 @@ function PostBeginPlay()
 			x--;
 		}
 
-	// set up an extra download manager that we'll override later with the official UT2004RPG redirect
+	// set up an extra download manager that we'll override later with the official fpsRPG redirect
 	if (Level.NetMode != NM_StandAlone && bUseOfficialRedirect)
 	{
 		foreach AllObjects(class'TCPNetDriver', NetDriver)
@@ -487,7 +484,7 @@ function ModifyPlayer(Pawn Other)
 
 			data.PointsAvailable = PointsPerLevel * data.Level;
 			data.AdrenalineMax = 100;
-			data.Shieldmax = 150;
+			data.ShieldMax = 0;
 			if (Levels.length > data.Level)
 				data.NeededExp = Levels[data.Level];
 			else if (InfiniteReqEXPValue != 0)
@@ -514,7 +511,7 @@ function ModifyPlayer(Pawn Other)
 			data.Level = StartingLevel;
 			data.PointsAvailable = PointsPerLevel * (StartingLevel - 1);
 			data.AdrenalineMax = 100;
-			data.Shieldmax = 150;
+			data.ShieldMax = 0;
 			if (Levels.length > StartingLevel)
 				data.NeededExp = Levels[StartingLevel];
 			else if (InfiniteReqEXPValue != 0)
@@ -784,7 +781,7 @@ function ValidateData(RPGPlayerDataObject Data)
 	TotalPoints += Data.WeaponSpeed + Data.Attack + Data.Defense + Data.AmmoMax;
 	TotalPoints += Data.HealthBonus / 2;
 	TotalPoints += Data.AdrenalineMax - 100;
-	TotalPoints += Data.ShieldMax - 150;
+	TotalPoints += Data.ShieldMax - 0;
 	for (x = 0; x < Data.Abilities.length; x++)
 	{
 		bAllowedAbility = false;
@@ -1455,7 +1452,7 @@ static function FillPlayInfo(PlayInfo PlayInfo)
 	PlayInfo.AddSetting("fpsRPG", "StartingLevel", default.PropsDisplayText[i++], 1, 10, "Text", "2;1:99");
 	PlayInfo.AddSetting("fpsRPG", "PointsPerLevel", default.PropsDisplayText[i++], 5, 10, "Text", "2;1:99");
 	PlayInfo.AddSetting("fpsRPG", "LevelDiffExpGainDiv", default.PropsDisplayText[i++], 1, 10, "Text", "5;0.001:100.0",,, true);
-	PlayInfo.AddSetting("fpsRPG", "EXPForWin", default.PropsDisplayText[i++], 10, 10, "Text", "3;0:99999");
+	PlayInfo.AddSetting("fpsRPG", "EXPForWin", default.PropsDisplayText[i++], 10, 10, "Text", "3;0:999");
 	PlayInfo.AddSetting("fpsRPG", "bFakeBotLevels", default.PropsDisplayText[i++], 4, 10, "Check");
 	PlayInfo.AddSetting("fpsRPG", "bReset", default.PropsDisplayText[i++], 0, 10, "Check");
 	PlayInfo.AddSetting("fpsRPG", "WeaponModifierChance", default.PropsDisplayText[i++], 50, 10, "Text", "4;0.0:1.0");
@@ -1473,6 +1470,7 @@ static function FillPlayInfo(PlayInfo PlayInfo)
 	PlayInfo.AddSetting("fpsRPG", "bIronmanMode", default.PropsDisplayText[i++], 4, 10, "Check",,,, true);
 	PlayInfo.AddSetting("fpsRPG", "bUseOfficialRedirect", default.PropsDisplayText[i++], 4, 10, "Check",,, true, true);
 	PlayInfo.AddSetting("fpsRPG", "BotBonusLevels", default.PropsDisplayText[i++], 4, 10, "Text", "2;0:99",,, true);
+	//PlayInfo.AddSetting("fpsRPG", "bExperiencePickups", "Experience Pickups", 0, 10, "Check");
 	PlayInfo.AddSetting("fpsRPG", "MonsterLevel", default.PropsDisplayText[i++], 1, 10, "Text", "5;1:1000");
 
 	class'RPGArtifactManager'.static.FillPlayInfo(PlayInfo);
@@ -1540,108 +1538,130 @@ defaultproperties
      Levels(26)=140
      Levels(27)=145
      Levels(28)=150
-     InfiniteReqEXPValue=127
+     InfiniteReqEXPValue=5
      LevelDiffExpGainDiv=2.000000
      MaxLevelupEffectStacking=5
      EXPForWin=50000
      BotBonusLevels=0
-     StatCaps(0)=200
+     StatCaps(0)=450
      StatCaps(1)=2000
      StatCaps(2)=500
-     StatCaps(3)=1500
+     StatCaps(3)=2500
      StatCaps(4)=1750
      StatCaps(5)=2000
-     StatCaps(6)=440
+     StatCaps(6)=2500
      MoneyPerKill=2
      StartingMoney=0
      Abilities(0)=Class'fpsRPG.AbilityRegen'
-     Abilities(1)=Class'fpsRPG.AbilityAdrenalineRegen'
-     Abilities(2)=Class'fpsRPG.AbilityAmmoRegen'
-     Abilities(3)=Class'fpsRPG.AbilityCounterShove'
-     Abilities(4)=Class'fpsRPG.AbilityJumpZ'
-     Abilities(5)=Class'fpsRPG.AbilityReduceFallDamage'
-     Abilities(6)=Class'fpsRPG.AbilityRetaliate'
-     Abilities(7)=Class'fpsRPG.AbilitySpeed'
-     Abilities(8)=Class'fpsRPG.AbilityShieldStrength'
-     Abilities(9)=Class'fpsRPG.AbilityNoWeaponDrop'
-     Abilities(10)=Class'fpsRPG.AbilityVampire'
-     Abilities(11)=Class'fpsRPG.AbilityHoarding'
-     Abilities(12)=Class'fpsRPG.AbilityReduceSelfDamage'
-     Abilities(13)=Class'fpsRPG.AbilitySmartHealing'
-     Abilities(14)=Class'fpsRPG.AbilityAirControl'
-     Abilities(15)=Class'fpsRPG.AbilityGhost'
-     Abilities(16)=Class'fpsRPG.DruidUltima'
-     Abilities(17)=Class'fpsRPG.AbilityAdrenalineSurge'
-     Abilities(18)=Class'fpsRPG.AbilityFastWeaponSwitch'
-     Abilities(19)=Class'fpsRPG.AbilityAwareness'
-     Abilities(20)=Class'fpsRPG.AbilityMonsterSummon'
-     WeaponModifierChance=0.000000
-     MonsterLevel=5
-     WeaponModifiers(0)=(WeaponClass=Class'fpsRPG.RW_Vampire',Chance=1)
-     WeaponModifiers(1)=(WeaponClass=Class'fpsRPG.RW_Vorpal',Chance=1)
-     WeaponModifiers(2)=(WeaponClass=Class'fpsRPG.RW_EnhancedInfinity',Chance=1)
-     WeaponModifiers(3)=(WeaponClass=Class'fpsRPG.RW_Freeze',Chance=1)
-     WeaponModifiers(4)=(WeaponClass=Class'fpsRPG.RW_Healer',Chance=2)
-     WeaponModifiers(5)=(WeaponClass=Class'fpsRPG.RW_Knockback',Chance=1)
-     WeaponModifiers(6)=(WeaponClass=Class'fpsRPG.RW_Speedy',Chance=1)
-     WeaponModifiers(7)=(WeaponClass=Class'fpsRPG.RW_NullEntropy',Chance=1)
-     WeaponModifiers(8)=(WeaponClass=Class'fpsRPG.RW_EnhancedForce',Chance=2)
-     WeaponModifiers(9)=(WeaponClass=Class'fpsRPG.RW_EnhancedPenetrating',Chance=2)
-     WeaponModifiers(10)=(WeaponClass=Class'fpsRPG.RW_EnhancedDamage',Chance=4)
-     WeaponModifiers(11)=(WeaponClass=Class'fpsRPG.RW_EnhancedNoMomentum',Chance=3)
-     WeaponModifiers(12)=(WeaponClass=Class'fpsRPG.RW_EnhancedEnergy',Chance=2)
-     WeaponModifiers(13)=(WeaponClass=Class'fpsRPG.RW_EnhancedLuck',Chance=3)
-     WeaponModifiers(14)=(WeaponClass=Class'fpsRPG.RW_EnhancedPiercing',Chance=2)
-     WeaponModifiers(15)=(WeaponClass=Class'fpsRPG.RW_Rage',Chance=1)
-     WeaponModifiers(16)=(WeaponClass=Class'fpsRPG.RW_Reflection',Chance=1)
-     WeaponModifiers(17)=(WeaponClass=Class'fpsRPG.RW_Experience',Chance=2)
-     WeaponModifiers(18)=(WeaponClass=Class'fpsRPG.RW_Adren',Chance=2)
-     WeaponsList(0)=(WeaponClass=Class'xWeapons.TransLauncher',WeaponCost=5)
-     WeaponsList(1)=(WeaponClass=Class'xWeapons.LinkGun',WeaponCost=5)
-
-     ArtifactsList(0)=(ArtifactClass=Class'fpsRPG.ArtifactFlight',ArtifactCost=5)
-     ArtifactsList(1)=(ArtifactClass=Class'fpsRPG.ArtifactLightningBeam',ArtifactCost=5)
-     ArtifactsList(2)=(ArtifactClass=Class'fpsRPG.ArtifactLightningBolt',ArtifactCost=5)
-     ArtifactsList(3)=(ArtifactClass=Class'fpsRPG.ArtifactLightningRodB',ArtifactCost=5)
-     ArtifactsList(4)=(ArtifactClass=Class'fpsRPG.Artifact_GlobeInvulnerability',ArtifactCost=5)
-     ArtifactsList(5)=(ArtifactClass=Class'fpsRPG.ArtifactFreezeBomb',ArtifactCost=5)
-     ArtifactsList(6)=(ArtifactClass=Class'fpsRPG.ArtifactHealingBlast',ArtifactCost=5)
-     ArtifactsList(7)=(ArtifactClass=Class'fpsRPG.ArtifactPoisonBlast',ArtifactCost=5)
-     ArtifactsList(8)=(ArtifactClass=Class'fpsRPG.ArtifactMegaBlast',ArtifactCost=5)
-     ArtifactsList(9)=(ArtifactClass=Class'fpsRPG.ArtifactRepulsion',ArtifactCost=5)
-     ArtifactsList(10)=(ArtifactClass=Class'fpsRPG.ArtifactResurrection',ArtifactCost=5)
-     ArtifactsList(11)=(ArtifactClass=Class'fpsRPG.ArtifactShieldBlast',ArtifactCost=5)
-     ArtifactsList(12)=(ArtifactClass=Class'fpsRPG.ArtifactSphereDamage',ArtifactCost=5)
-     ArtifactsList(13)=(ArtifactClass=Class'fpsRPG.ArtifactSphereHealing',ArtifactCost=5)
-     ArtifactsList(14)=(ArtifactClass=Class'fpsRPG.ArtifactSphereInvulnerability',ArtifactCost=5)
-     ArtifactsList(15)=(ArtifactClass=Class'fpsRPG.ArtifactSpider',ArtifactCost=5)
-     ArtifactsList(16)=(ArtifactClass=Class'fpsRPG.ArtifactTeleport',ArtifactCost=5)
-     ArtifactsList(17)=(ArtifactClass=Class'fpsRPG.ArtifactTripleDamageB',ArtifactCost=5)
-     
-     ModifiersList(0)=(ArtifactClass=Class'fpsRPG.ArtifactMakeAdren',ModifierCost=5)
-     ModifiersList(1)=(ArtifactClass=Class'fpsRPG.ArtifactMakeDamage',ModifierCost=5)
-     ModifiersList(2)=(ArtifactClass=Class'fpsRPG.ArtifactMakeEnergy',ModifierCost=5)
-     ModifiersList(3)=(ArtifactClass=Class'fpsRPG.ArtifactMakeForce',ModifierCost=5)
-     ModifiersList(4)=(ArtifactClass=Class'fpsRPG.ArtifactMakeFreeze',ModifierCost=5)
-     ModifiersList(5)=(ArtifactClass=Class'fpsRPG.ArtifactMakeInfinity',ModifierCost=5)
-     ModifiersList(6)=(ArtifactClass=Class'fpsRPG.ArtifactMakeKnockback',ModifierCost=5)
-     ModifiersList(7)=(ArtifactClass=Class'fpsRPG.ArtifactMakeLuck',ModifierCost=5)
-     ModifiersList(8)=(ArtifactClass=Class'fpsRPG.ArtifactMakePenetrating',ModifierCost=5)
-     ModifiersList(9)=(ArtifactClass=Class'fpsRPG.ArtifactMakePetrification',ModifierCost=5)
-     ModifiersList(10)=(ArtifactClass=Class'fpsRPG.ArtifactMakeExperience',ModifierCost=5)
-     ModifiersList(11)=(ArtifactClass=Class'fpsRPG.ArtifactMakePiercing',ModifierCost=5)
-     ModifiersList(12)=(ArtifactClass=Class'fpsRPG.ArtifactMakePoison',ModifierCost=5)
-     ModifiersList(13)=(ArtifactClass=Class'fpsRPG.ArtifactMakeSpeedy',ModifierCost=5)
-     ModifiersList(14)=(ArtifactClass=Class'fpsRPG.ArtifactMakeSturdy',ModifierCost=5)
-     ModifiersList(15)=(ArtifactClass=Class'fpsRPG.ArtifactMakeVampire',ModifierCost=5)
-     ModifiersList(16)=(ArtifactClass=Class'fpsRPG.ArtifactMakeVorpal',ModifierCost=5)
-     
-     Version=1
-     bMagicalStartingWeapons=False
+     Abilities(1)=Class'fpsRPG.AbilityJumpZ'
+     Abilities(2)=Class'fpsRPG.AbilitySpeed'
+     Abilities(3)=Class'fpsRPG.AbilityGhost'
+     Abilities(4)=Class'fpsRPG.AbilityUltima'
+     Abilities(5)=Class'fpsRPG.AbilityVampire'
+     Abilities(6)=Class'fpsRPG.AbilityLactate'
+     Abilities(7)=Class'fpsRPG.AbilityHoarding'
+     Abilities(8)=Class'fpsRPG.AbilityAmmoRegen'
+     Abilities(9)=Class'fpsRPG.AbilityRetaliate'
+     Abilities(10)=Class'fpsRPG.AbilityAwareness'
+     Abilities(11)=Class'fpsRPG.AbilityArmorRegen'
+     Abilities(12)=Class'fpsRPG.AbilityLimitBreak'
+     Abilities(13)=Class'fpsRPG.AbilityAirControl'
+     Abilities(14)=Class'fpsRPG.AbilityEnergyShield'
+     Abilities(15)=Class'fpsRPG.AbilityVehicleEject'
+     Abilities(16)=Class'fpsRPG.AbilitySmartHealing'
+     Abilities(17)=Class'fpsRPG.AbilityNoWeaponDrop'
+     Abilities(18)=Class'fpsRPG.AbilityCounterShove'
+     Abilities(19)=Class'fpsRPG.AbilityAdrenPerWave'
+     Abilities(20)=Class'fpsRPG.AbilityEnergyVampire'
+     Abilities(21)=Class'fpsRPG.AbilityMonsterSummon'
+     Abilities(22)=Class'fpsRPG.AbilityShieldStrength'
+     Abilities(23)=Class'fpsRPG.AbilityEnhancedDamage'
+     Abilities(24)=Class'fpsRPG.AbilityExtraExperience'
+     Abilities(25)=Class'fpsRPG.AbilityAdrenalineRegen'
+     Abilities(26)=Class'fpsRPG.AbilityAdrenalineSurge'
+     Abilities(27)=Class'fpsRPG.AbilityReduceSelfDamage'
+     Abilities(28)=Class'fpsRPG.AbilityReduceFallDamage'
+     Abilities(29)=Class'fpsRPG.AbilityFastWeaponSwitch'
+     Abilities(30)=Class'fpsRPG.AbilityEnhancedReduction'
+     Abilities(31)=Class'fpsRPG.AbilityWeaponsProficiency'
+     Abilities(32)=Class'fpsRPG.AbilityWheeledVehicleStunts'
+     WeaponModifierChance=1.000000
+     MonsterLevel=50
+     WeaponModifiers(0)=(WeaponClass=Class'fpsRPG.RW_Vampire',Chance=0)
+     WeaponModifiers(1)=(WeaponClass=Class'fpsRPG.RW_Vorpal',Chance=0)
+     WeaponModifiers(2)=(WeaponClass=Class'fpsRPG.RW_EnhancedInfinity',Chance=0)
+     WeaponModifiers(3)=(WeaponClass=Class'fpsRPG.RW_Freeze',Chance=0)
+     WeaponModifiers(4)=(WeaponClass=Class'fpsRPG.RW_Healer',Chance=0)
+     WeaponModifiers(5)=(WeaponClass=Class'fpsRPG.RW_Knockback',Chance=0)
+     WeaponModifiers(6)=(WeaponClass=Class'fpsRPG.RW_Speedy',Chance=0)
+     WeaponModifiers(7)=(WeaponClass=Class'fpsRPG.RW_NullEntropy',Chance=0)
+     WeaponModifiers(8)=(WeaponClass=Class'fpsRPG.RW_EnhancedForce',Chance=0)
+     WeaponModifiers(9)=(WeaponClass=Class'fpsRPG.RW_EnhancedPenetrating',Chance=0)
+     WeaponModifiers(10)=(WeaponClass=Class'fpsRPG.RW_EnhancedDamage',Chance=0)
+     WeaponModifiers(11)=(WeaponClass=Class'fpsRPG.RW_EnhancedNoMomentum',Chance=0)
+     WeaponModifiers(12)=(WeaponClass=Class'fpsRPG.RW_EnhancedEnergy',Chance=0)
+     WeaponModifiers(13)=(WeaponClass=Class'fpsRPG.RW_EnhancedLuck',Chance=0)
+     WeaponModifiers(14)=(WeaponClass=Class'fpsRPG.RW_EnhancedPiercing',Chance=0)
+     WeaponModifiers(15)=(WeaponClass=Class'fpsRPG.RW_Rage',Chance=0)
+     WeaponModifiers(16)=(WeaponClass=Class'fpsRPG.RW_Reflection',Chance=0)
+     WeaponModifiers(17)=(WeaponClass=Class'fpsRPG.RW_Experience',Chance=0)
+     WeaponModifiers(18)=(WeaponClass=Class'fpsRPG.RW_Adren',Chance=0)
+     WeaponsList(0)=(WeaponClass=Class'xWeapons.TransLauncher',WeaponCost=75)
+	 WeaponsList(1)=(WeaponClass=Class'fpsWeaponPack.PowerShieldGun',WeaponCost=100)
+	 WeaponsList(2)=(WeaponClass=Class'fpsWeaponPack.MP5Gun',WeaponCost=125)
+	 WeaponsList(3)=(WeaponClass=Class'fpsWeaponPack.Flamer',WeaponCost=150)
+	 WeaponsList(4)=(WeaponClass=Class'fpsWeaponPack.Inferno',WeaponCost=175)
+	 WeaponsList(5)=(WeaponClass=Class'fpsWeaponPack.pgPortalGun',WeaponCost=200)
+	 WeaponsList(6)=(WeaponClass=Class'fpsWeaponPack.TeslaGun',WeaponCost=225)
+	 WeaponsList(7)=(WeaponClass=Class'fpsWeaponPack.BigBangRifle',WeaponCost=250)
+	 WeaponsList(8)=(WeaponClass=Class'fpsWeaponPack.NuclearShockRifle',WeaponCost=275)
+	 WeaponsList(9)=(WeaponClass=Class'fpsWeaponPack.MagicWandWeapon',WeaponCost=300)
+	 WeaponsList(10)=(WeaponClass=Class'fpsWeaponPack.LilLady',WeaponCost=450)
+	 WeaponsList(11)=(WeaponClass=Class'fpsWeaponPack.OrphanMaker',WeaponCost=600)
+	 WeaponsList(12)=(WeaponClass=Class'fpsWeaponPack.DeathCannon',WeaponCost=750)
+	 WeaponsList(13)=(WeaponClass=Class'fpsWeaponPack.Vortex',WeaponCost=900)
+     ArtifactsList(0)=(ArtifactClass=Class'fpsRPG.ArtifactTeleport',ArtifactCost=60)
+     ArtifactsList(1)=(ArtifactClass=Class'fpsRPG.ArtifactSpider',ArtifactCost=80)
+     ArtifactsList(2)=(ArtifactClass=Class'fpsRPG.ArtifactFlight',ArtifactCost=100)
+     ArtifactsList(3)=(ArtifactClass=Class'fpsRPG.ArtifactLightningRodB',ArtifactCost=120)
+     ArtifactsList(4)=(ArtifactClass=Class'fpsRPG.ArtifactLightningBeam',ArtifactCost=140)
+     ArtifactsList(5)=(ArtifactClass=Class'fpsRPG.ArtifactLightningBolt',ArtifactCost=160)
+     ArtifactsList(6)=(ArtifactClass=Class'fpsRPG.ArtifactRepulsion',ArtifactCost=180)
+     ArtifactsList(7)=(ArtifactClass=Class'fpsRPG.ArtifactResurrection',ArtifactCost=200)
+     ArtifactsList(8)=(ArtifactClass=Class'fpsRPG.ArtifactTripleDamageB',ArtifactCost=220)
+     ArtifactsList(9)=(ArtifactClass=Class'fpsRPG.ArtifactFreezeBomb',ArtifactCost=240)
+     ArtifactsList(10)=(ArtifactClass=Class'fpsRPG.ArtifactMegaBlast',ArtifactCost=260)
+     ArtifactsList(11)=(ArtifactClass=Class'fpsRPG.ArtifactShieldBlast',ArtifactCost=280)
+     ArtifactsList(12)=(ArtifactClass=Class'fpsRPG.ArtifactHealingBlast',ArtifactCost=300)
+     ArtifactsList(13)=(ArtifactClass=Class'fpsRPG.ArtifactHeal',ArtifactCost=350)
+     ArtifactsList(14)=(ArtifactClass=Class'fpsRPG.Artifact_GlobeInvulnerability',ArtifactCost=400)
+     ArtifactsList(15)=(ArtifactClass=Class'fpsRPG.ArtifactSphereHealing',ArtifactCost=425)
+     ArtifactsList(16)=(ArtifactClass=Class'fpsRPG.ArtifactSphereDamage',ArtifactCost=450)
+     ArtifactsList(17)=(ArtifactClass=Class'fpsRPG.ArtifactSphereInvulnerability',ArtifactCost=475)
+     ArtifactsList(18)=(ArtifactClass=Class'fpsRPG.ArtifactGodlyness',ArtifactCost=500)
+     ModifiersList(0)=(ArtifactClass=Class'fpsRPG.ArtifactMakeForce',ModifierCost=100)
+     ModifiersList(1)=(ArtifactClass=Class'fpsRPG.ArtifactMakeLuck',ModifierCost=115)
+     ModifiersList(2)=(ArtifactClass=Class'fpsRPG.ArtifactMakeSpeedy',ModifierCost=130)
+     ModifiersList(3)=(ArtifactClass=Class'fpsRPG.ArtifactMakeKnockback',ModifierCost=145)
+     ModifiersList(4)=(ArtifactClass=Class'fpsRPG.ArtifactMakeDamage',ModifierCost=160)
+     ModifiersList(5)=(ArtifactClass=Class'fpsRPG.ArtifactMakePenetrating',ModifierCost=175)
+     ModifiersList(6)=(ArtifactClass=Class'fpsRPG.ArtifactMakeHealing',ModifierCost=190)
+     ModifiersList(7)=(ArtifactClass=Class'fpsRPG.ArtifactMakeFreeze',ModifierCost=205)
+     ModifiersList(8)=(ArtifactClass=Class'fpsRPG.ArtifactMakeSturdy',ModifierCost=220)
+     ModifiersList(9)=(ArtifactClass=Class'fpsRPG.ArtifactMakeVampire',ModifierCost=235)
+     ModifiersList(10)=(ArtifactClass=Class'fpsRPG.ArtifactMakeEnergy',ModifierCost=250)
+     ModifiersList(11)=(ArtifactClass=Class'fpsRPG.ArtifactMakeVorpal',ModifierCost=265)
+     ModifiersList(12)=(ArtifactClass=Class'fpsRPG.ArtifactMakeInfinity',ModifierCost=280)
+     ModifiersList(13)=(ArtifactClass=Class'fpsRPG.ArtifactMakePetrification',ModifierCost=295)
+     ModifiersList(14)=(ArtifactClass=Class'fpsRPG.ArtifactMakePiercing',ModifierCost=310)
+     ModifiersList(15)=(ArtifactClass=Class'fpsRPG.ArtifactMakePoison',ModifierCost=325)
+     ModifiersList(16)=(ArtifactClass=Class'fpsRPG.ArtifactMakeAdren',ModifierCost=340)
+     ModifiersList(17)=(ArtifactClass=Class'fpsRPG.ArtifactMakeExperience',ModifierCost=355)
+     Version=22
      bAutoAdjustInvasionLevel=True
-     bFakeBotLevels=False
+     bFakeBotLevels=True
      bUseOfficialRedirect=True
-     InvasionAutoAdjustFactor=0.100000
+     InvasionAutoAdjustFactor=0.300000
      SuperAmmoClassNames(0)="RedeemerAmmo"
      SuperAmmoClassNames(1)="BallAmmo"
      SuperAmmoClassNames(2)="SCannonAmmo"
@@ -1666,7 +1686,6 @@ defaultproperties
      PropsDisplayText(18)="Ironman Mode"
      PropsDisplayText(19)="Use Official Redirect Server"
      PropsDisplayText(20)="Extra Bot Levelups After Match"
-     PropsDisplayText(21)="Monsters Starting Level"
      PropsDescText(0)="During the game, all data will be saved every this many seconds."
      PropsDescText(1)="New players start at this Level."
      PropsDescText(2)="The number of stat points earned from a levelup."
@@ -1692,8 +1711,8 @@ defaultproperties
      PropsExtras="0;Add Specified Value;1;Add Specified Percent"
      bAddToServerPackages=True
      GroupName="RPG"
-     FriendlyName="ÿFails Per Second RPG"
-     Description="UT2004RPG Hardly Modified for the Fails Per Second Invasion Server"
+     FriendlyName="Fails Per Second RPG"
+     Description="fpsRPG with a persistent experience level system, magic weapons, and artifacts."
      bAlwaysRelevant=True
      RemoteRole=ROLE_SimulatedProxy
 }

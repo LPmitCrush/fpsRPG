@@ -28,7 +28,7 @@ static function ScoreKill(Controller Killer, Controller Killed, bool bOwnedByKil
 
 defaultproperties
 {
-     AbilityName="Ultima"
+     AbilityName="язUltima"
      Description="This ability causes your body to release energy when you die. The energy will collect at a single point which will then cause a Redeemer-like nuclear explosion. Level 2 of this ability causes the energy to collect for the explosion in half the time. The ability will only trigger if you have killed at least one enemy during your life. You need to have a Damage Bonus stat of at least 250 to purchase this ability. You can't have both Ultima and Ghost at the same time. (Max Level: 20)"
      StartingCost=25
      MaxLevel=20

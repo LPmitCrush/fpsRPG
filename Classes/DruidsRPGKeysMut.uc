@@ -53,7 +53,7 @@ defaultproperties
      ArtifactKeyConfigs(23)=(Alias="SelectRemoteMax",ArtifactClass=Class'fpsRPG.ArtifactRemoteMax')
      ArtifactKeyConfigs(24)=(Alias="SelectShieldBlast",ArtifactClass=Class'fpsRPG.ArtifactShieldBlast')
      GroupName="DruidsRPGKeys"
-     FriendlyName="ÿfpsRPG Key Bindings"
+     FriendlyName="Key Bindings for RPG Artifacts"
      Description="Allow users to bind keys for selecting RPG Artifacts"
      bAlwaysRelevant=True
      RemoteRole=ROLE_SimulatedProxy

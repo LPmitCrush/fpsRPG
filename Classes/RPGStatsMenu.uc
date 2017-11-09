@@ -1,8 +1,6 @@
 Class RPGStatsMenu extends GUIPage
 	DependsOn(RPGStatsInv);
 
-
-
 var RPGStatsInv StatsInv;
 
 var AemoEditBox WeaponSpeedBox, HealthBonusBox, AdrenalineMaxBox, AttackBox, DefenseBox, AmmoMaxBox, ShieldMaxBox, PointsAvailableBox;

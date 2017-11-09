@@ -9,6 +9,6 @@ simulated function PostBeginPlay()
 
 defaultproperties
 {
-     DefaultWeaponClassName="DruidWeaponSentinel"
+     DefaultWeaponClassName=""
      bNoTeamBeacon=False
 }

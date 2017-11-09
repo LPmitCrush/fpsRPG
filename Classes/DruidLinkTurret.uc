@@ -75,9 +75,9 @@ event bool KDriverLeave( bool bForceLeave )
 
 defaultproperties
 {
-     TurretBaseClass=class'DruidLinkTurretBase'
-     TurretSwivelClass=class'DruidLinkTurretSwivel'
-     DefaultWeaponClassName="Weapon_DruidLink"
+     TurretBaseClass=fpsRPG.DruidLinkTurretBase
+     TurretSwivelClass=fpsRPG.DruidLinkTurretSwivel
+     DefaultWeaponClassName=""
      VehicleProjSpawnOffset=(X=170.000000)
      bRelativeExitPos=True
      ExitPositions(0)=(Y=100.000000,Z=100.000000)

@@ -30,7 +30,7 @@ Static Simulated Function ModifyPawn(Pawn Other, int AbilityLevel)
 defaultproperties
 {
      MinLev=100
-     AbilityName="Lactate"
+     AbilityName="ÿÙLactate"
      Description="This special ability will prevent anyone from receiving damage by a Milk Monster (milk bottles + googles)...most of the time|Beware: Killing the milk monster is not necessarily a good thing! You have been warned|Required Level: Level 100|Cost: 60|Max Level: 1"
      StartingCost=60
      CostAddPerLevel=0

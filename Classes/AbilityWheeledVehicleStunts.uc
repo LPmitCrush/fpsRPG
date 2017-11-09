@@ -113,7 +113,7 @@ defaultproperties
      SpinLevelMultiplier=1.250000
      JumpChargeTime=1.000000
      ChargeLevelMultiplier=0.800000
-     AbilityName="Stunt Vehicles"
+     AbilityName="ÿ3Stunt Vehicles"
      Description="With this skill, you can make wheeled vehicles jump.|Hold down the crouch key to charge up and then release to jump.|This ability also grants control of wheeled vehicles in mid-air.|Additional levels provide more spin, momentum, and less charge time.|(Max Level 1. Max Level Engineer 3.)|Cost (per level): 5,10,15"
      StartingCost=5
      CostAddPerLevel=5

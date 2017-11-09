@@ -176,7 +176,7 @@ defaultproperties
      MaxHealing=500.000000
      MinHealing=100.000000
      HealingRadius=2200.000000
-     EffectOverlay=Shader'fpsRPGTex.Domshaders.PulseBlueShader'
+     EffectOverlay=Shader'fpsRPGTex.Overlays.PulseBlueShader'
      DrawType=DT_None
      TransientSoundVolume=1.000000
      TransientSoundRadius=5000.000000

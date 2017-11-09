@@ -24,7 +24,7 @@ function Tick(float deltaTime)
 		for (m = Level.Game.BaseMutator; m != None; m = m.NextMutator)
 			if (MutfpsRPG(m) != None)
 			{
-				RPGMut = MutfpsRPG(M);
+				RPGMut = MutfpsRPG(m);
 				break;
 			}
 

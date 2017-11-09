@@ -19,7 +19,7 @@ static function HandleDamage(out int Damage, Pawn Injured, Pawn Instigator, out 
 
 defaultproperties
 {
-     AbilityName="Cautiousness"
+     AbilityName="ÿSCautiousness"
      Description="Reduces self damage by 15% per level. Your Health Bonus stat must be at least 50 and your Damage Reduction stat at least 25 to purchase this ability. (Max Level: 20)"
      StartingCost=15
      CostAddPerLevel=5

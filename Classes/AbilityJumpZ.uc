@@ -16,7 +16,7 @@ static simulated function ModifyPawn(Pawn Other, int AbilityLevel)
 
 defaultproperties
 {
-     AbilityName="Power Jump"
+     AbilityName="ящPower Jump"
      Description="Increases your jumping height by 10% per level. The Speed adrenaline combo will stack with this effect. You must be a Level equal to ten times the ability level you wish to have before you can purchase it. (Max Level: 5)"
      StartingCost=15
      CostAddPerLevel=5

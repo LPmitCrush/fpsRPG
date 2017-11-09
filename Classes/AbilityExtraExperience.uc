@@ -27,7 +27,7 @@ static function ScoreKill(Controller Killer, Controller Killed, bool bOwnedByKil
 
 defaultproperties
 {
-     AbilityName="Experience Surge"
+     AbilityName="ÿgExperience Surge"
      Description="Increases the amount of Experience you get for killing a monster by 1% per level"
      StartingCost=1
      CostAddPerLevel=3

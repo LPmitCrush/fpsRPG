@@ -31,7 +31,7 @@ static simulated function ModifyPawn(Pawn Other, int AbilityLevel)
 
 defaultproperties
 {
-     AbilityName="Regeneration"
+     AbilityName="ÿÿRegeneration"
      Description="Heals 1 health per second per level. Does not heal past starting health amount. You must have a Health Bonus stat equal to 30 times the ability level you wish to have before you can purchase it. (Max Level: 10)"
      StartingCost=15
      CostAddPerLevel=5

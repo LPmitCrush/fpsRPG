@@ -170,6 +170,6 @@ function Timer()
 defaultproperties
 {
      GroupName="RPGHUDInvasion"
-     FriendlyName="ÿfps Invasion RPG HUD"
+     FriendlyName="Fails Per Second RPG HUD"
      Description="Show Friendly Monsters In HUD and show monsters on a danger scale from Green to Red. Also show xp gained on Invasion scoreboard."
 }

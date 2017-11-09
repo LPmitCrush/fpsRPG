@@ -1,5 +1,5 @@
 class DruidBlock extends Pawn;
-
+#exec OBJ LOAD FILE=..\StaticMeshes\fpsRPGMesh.usx
 var byte Team;
 
 function SetTeamNum(byte T)

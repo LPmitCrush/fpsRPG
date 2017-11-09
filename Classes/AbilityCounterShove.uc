@@ -27,7 +27,7 @@ static function HandleDamage(int Damage, Pawn Injured, Pawn Instigator, out vect
 
 defaultproperties
 {
-     AbilityName="CounterShove"
+     AbilityName="ˇçCounterShove"
      Description="Whenever you are damaged by another player, 25% of the momentum per level (or 150% at level 5) is also done to the player who hurt you. Will not CounterShove a CounterShove. You must have a Damage Reduction of at least 50 to purchase this ability. (Max Level: 5)"
      StartingCost=15
      MaxLevel=5

@@ -118,7 +118,7 @@ static function bool PreventSever(Pawn Killed, name boneName, int Damage, class<
 static simulated function ModifyVehicle(Vehicle V, int AbilityLevel)
 {
 	// called when player enters a vehicle
-	// UT2004RPG resets the vehicle health back to defaults when you get in. We need to reapply bonus
+	// fpsRPG resets the vehicle health back to defaults when you get in. We need to reapply bonus
 	local float Healthperc;
 
 	if (V.SuperHealthMax == 199)

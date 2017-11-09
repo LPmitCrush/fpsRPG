@@ -7,20 +7,10 @@ var config float HealthBonus;
 
 static simulated function int Cost(RPGPlayerDataObject Data, int CurrentLevel)
 {
-	local int x;
-	local bool ok;
-
-	for (x = 0; x < Data.Abilities.length && !ok; x++)
-		if (Data.Abilities[x] == class'ClassAdrenalineMaster')
-			ok = true;
-	if(!ok)
-	{
-		if(CurrentLevel > 0)
-			log("Warning:"@data.Name@"has"@default.class@"Level"@CurrentLevel@"but does not have an associated Class to allow them to purchase it");
+	if (Data.AdrenalineMax < 250)
 		return 0;
-	}
-	
-	return Super.Cost(Data, CurrentLevel);
+	else
+		return Super.Cost(Data, CurrentLevel);
 }
 
 static function bool PrePreventDeath(Pawn Killed, Controller Killer, class<DamageType> DamageType, vector HitLocation, int AbilityLevel)
@@ -115,7 +105,7 @@ defaultproperties
 {
      HealthLimit=10
      HealthBonus=0.500000
-     AbilityName="Energy Shield"
+     AbilityName="ÿ§Energy Shield"
      Description="Uses adrenaline as a shield. You must be an Adrenaline Master to purchase this skill. |Cost (per level): 15. Max Level: 2."
      StartingCost=15
      MaxLevel=2

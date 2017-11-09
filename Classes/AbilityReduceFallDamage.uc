@@ -16,7 +16,7 @@ static simulated function ModifyPawn(Pawn Other, int AbilityLevel)
 
 defaultproperties
 {
-     AbilityName="Iron Legs"
+     AbilityName="ÿMIron Legs"
      Description="Increases the distance you can safely fall by 25% per level and reduces fall damage for distances still beyond your capacity to handle. Your Health Bonus stat must be at least 50 to purchase this ability. (Max Level: 4)"
      StartingCost=10
      CostAddPerLevel=5

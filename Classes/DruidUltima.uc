@@ -55,7 +55,7 @@ static simulated function int Cost(RPGPlayerDataObject Data, int CurrentLevel)
 defaultproperties
 {
      AbilityName="Ultima"
-     Description="This ability causes your body to release energy when you die. The energy will collect at a single point which will then cause a Redeemer-like nuclear explosion. Level 2 of this ability causes the energy to collect for the explosion in half the time. The ability will only trigger if you have killed at least one enemy during your life. You need to have a Damage Bonus stat of at least 80 to purchase this ability. (Max Level: 20)|Cost (per level): 50,50"
-     StartingCost=25
-     MaxLevel=20
+     Description="This ability causes your body to release energy when you die. The energy will collect at a single point which will then cause a Redeemer-like nuclear explosion. Level 2 of this ability causes the energy to collect for the explosion in half the time. The ability will only trigger if you have killed at least one enemy during your life. You need to have a Damage Bonus stat of at least 80 to purchase this ability. (Max Level: 2)|Cost (per level): 50,50"
+     StartingCost=50
+     MaxLevel=2
 }

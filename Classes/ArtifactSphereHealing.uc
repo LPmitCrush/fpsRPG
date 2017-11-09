@@ -60,7 +60,7 @@ function PreBeginPlay()
 					return; //try again next time?
 				}
 
-				//this will also add it after UT2004RPG, which will be necessary.
+				//this will also add it after fpsRPG, which will be necessary.
 				Level.Game.GameRulesModifiers.AddGameRules(SG);
 				break;
 			}
@@ -357,7 +357,7 @@ defaultproperties
      AdrenalinePerSecond=7
      HealthPerSecond=15
      EffectRadius=900.000000
-     EffectOverlay=Shader'fpsRPGTex.DomShaders.PulseBlueShader'
+     EffectOverlay=Shader'fpsRPGTex.Overlays.PulseBlueShader'
      CostPerSec=7
      PickupClass=Class'fpsRPG.ArtifactSphereHealingPickup'
      IconMaterial=Texture'fpsRPGTex.Icons.SphereHealing'

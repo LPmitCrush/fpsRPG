@@ -54,6 +54,6 @@ function DropFrom(vector StartLocation)
 
 defaultproperties
 {
-     ItemName="Monster Summon"
+     ItemName=""
      bAlwaysRelevant=True
 }

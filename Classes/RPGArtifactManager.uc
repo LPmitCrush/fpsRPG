@@ -170,9 +170,9 @@ static function FillPlayInfo(PlayInfo PlayInfo)
 
 	Super.FillPlayInfo(PlayInfo);
 
-	PlayInfo.AddSetting("UT2004RPG", "MaxArtifacts", default.PropsDisplayText[i++], 3, 10, "Text", "2;0:25");
-	PlayInfo.AddSetting("UT2004RPG", "ArtifactDelay", default.PropsDisplayText[i++], 30, 10, "Text", "3;1:100");
-	PlayInfo.AddSetting("UT2004RPG", "MaxHeldArtifacts", default.PropsDisplayText[i++], 0, 10, "Text", "2;0:99");
+	PlayInfo.AddSetting("fpsRPG", "MaxArtifacts", default.PropsDisplayText[i++], 3, 10, "Text", "2;0:25");
+	PlayInfo.AddSetting("fpsRPG", "ArtifactDelay", default.PropsDisplayText[i++], 30, 10, "Text", "3;1:100");
+	PlayInfo.AddSetting("fpsRPG", "MaxHeldArtifacts", default.PropsDisplayText[i++], 0, 10, "Text", "2;0:99");
 }
 
 static function string GetDescriptionText(string PropName)

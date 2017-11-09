@@ -1,13 +1,9 @@
 class RW_EngineerLink extends RW_EnhancedInfinity
 	config(fpsRPG);
 
-var config Array<float> DamageBonusFromLinks;
 var config float ShieldHealingXPPercent;
-var config float SpiderGrowthRate;
-
 var int HealingLevel;
 var float ShieldHealingPercent;
-var float SpiderBoost;
 
 var RPGRules rules;
 
@@ -19,7 +15,7 @@ function PreBeginPlay()
 
 	if ( Level.Game == None)
 	{
-		log("Warning: Game not started. Cannot add HealableDamageGameRules for RW_EngineerLink. Healing for EXP will not occur.");
+		log("Warning: Game not started. Cannot add HealableDamageGameRules for Druids RW_EngineerLink. Healing for EXP will not occur.");
 		return;	
 	}
 
@@ -27,7 +23,7 @@ function PreBeginPlay()
 	{
 		SG = Level.Game.Spawn(class'HealableDamageGameRules');
 		if(SG == None)
-			log("Warning: Unable to spawn HealableDamageGameRules for RW_EngineerLink. Healing for EXP will not occur.");
+			log("Warning: Unable to spawn HealableDamageGameRules for Druids RW_EngineerLink. Healing for EXP will not occur.");
 		else
 			Level.Game.GameRulesModifiers = SG;
 	}
@@ -45,11 +41,11 @@ function PreBeginPlay()
 				SG = Level.Game.Spawn(class'HealableDamageGameRules');
 				if(SG == None)
 				{
-					log("Warning: Unable to spawn HealableDamageGameRules for RW_EngineerLink. Healing for EXP will not occur.");
+					log("Warning: Unable to spawn HealableDamageGameRules for Druids RW_EngineerLink. Healing for EXP will not occur.");
 					return; //try again next time?
 				}
 
-				//this will also add it after RPG, which will be necessarry.
+				//this will also add it after fpsRPG, which will be necessarry.
 				Level.Game.GameRulesModifiers.AddGameRules(SG);
 				break;
 			}
@@ -169,12 +165,6 @@ function NewAdjustTargetDamage(out int Damage, int OriginalDamage, Actor Victim,
 		return;
 	}
 
-	if(HardCoreInv(P.FindInventoryType(class'HardCoreInv')) != None && P != Instigator )
-	{
-		Super.NewAdjustTargetDamage(Damage, OriginalDamage, Victim, HitLocation, Momentum, DamageType);
-		return;
-	}
-
 	// ok, we have the linkshaft hitting someone
 	BestDamage = Max(Damage, OriginalDamage);
 	if (BestDamage == 0)
@@ -185,8 +175,6 @@ function NewAdjustTargetDamage(out int Damage, int OriginalDamage, Actor Victim,
 		if ( P.GetTeam() == Instigator.GetTeam() && Instigator.GetTeam() != None )
 		{
 			// same team
-			
-			
 			HealShield(P,BestDamage);
 
 			Momentum = vect(0,0,0);
@@ -236,8 +224,8 @@ function doHealed(int ShieldGiven, Pawn Victim)
 		}
 
 		//help keep things in check so a player never has surplus damage in storage.
-		if(Inv.Damage > (Victim.HealthMax + Class'HealableDamageGameRules'.default.MaxHealthBonus) - Victim.Health)
-			Inv.Damage = Max(0, (Victim.HealthMax + Class'HealableDamageGameRules'.default.MaxHealthBonus) - Victim.Health); //never let it go negative.
+		if(Inv.Damage > (Victim.HealthMax + 150) - Victim.Health)
+			Inv.Damage = Max(0, (Victim.HealthMax + 150) - Victim.Health); //never let it go negative.
 	}
 }
 
@@ -246,53 +234,9 @@ function AdjustTargetDamage(out int Damage, Actor Victim, Vector HitLocation, ou
 	// dont need this from RW_EnhancedInfinity as we are doing the processing in NewAdjustTargetDamage
 }
 
-static function float DamageIncreasedByLinkers(int NumLinkers)
-{
-	if (NumLinkers <= 0)
-		return 1.0;
-		
-	if (NumLinkers >= default.DamageBonusFromLinks.Length)
-		return default.DamageBonusFromLinks[default.DamageBonusFromLinks.Length -1];
-	else
-		return default.DamageBonusFromLinks[NumLinkers];
-}
-
-static function float XPForLinker(float xpGained, int NumLinkers)
-{
-	local float fDamageDone;
-	local float fDamageByAllLinkers;
-	local float fDamagePerLinker;
-	
-	if (xpGained <= 0.0)
-		return 0.0;
-
-	// so no linkers gives 100% to turret driver
-	// 1 linker is damage 175%, (7-4)/7 of xp to linker
-	// 2 linkers is damage 225%, (9-4)/(9*2) = 5/18 of xp to each linker
-	// 3 linkers is damage 250%, (10-4)/(10*3) = 6/30 = 1/5 to each linker
-	// 4 linkers is damage 250%, (10-4)/(10*4) = 6/40 = 3/20 xp to each linker
-	// 5 linkers is damage 250%, (10-4)/(10*5) = 6/50 = 3/25 xp to each linker
-	fDamageDone = static.DamageIncreasedByLinkers(NumLinkers);		
-
-	fDamageByAllLinkers = fDamageDone - 1.0;	// driver always gets his 100% share
-	if (fDamageByAllLinkers <= 0.0)
-		return 0.0;
-		
-	fDamagePerLinker = fDamageByAllLinkers / NumLinkers;
-
-	//Log("::::::::::::: XPForLinker xpGained:" $ xpGained @ "iNumLinkers:" $ NumLinkers	@ "DamagePerLinker:" $ fDamagePerLinker @ "xpPerLinker:" $ (xpGained * fDamagePerLinker)/fDamageDone @ "total xp given:" $ (xpGained/fDamageDone) + (NumLinkers * (xpGained * fDamagePerLinker)/fDamageDone) @ 1.0+(NumLinkers*fDamagePerLinker));
-	return (xpGained * fDamagePerLinker)/fDamageDone;
-
-}
-
 defaultproperties
 {
-     DamageBonusFromLinks(0)=1.000000
-     DamageBonusFromLinks(1)=1.750000
-     DamageBonusFromLinks(2)=2.250000
-     DamageBonusFromLinks(3)=2.500000
      ShieldHealingXPPercent=0.010000
-     SpiderGrowthRate=1.100000
      DamageBonus=0.000000
      ModifierOverlay=Shader'fpsRPGTex.DomShaders.ELinkShader'
      MinModifier=0

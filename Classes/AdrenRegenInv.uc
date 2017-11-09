@@ -51,7 +51,7 @@ function Timer()
 		}
 	}
 
-	if (!Instigator.InCurrentCombo() && !HasActiveArtifact() && C != None)
+	if (!Instigator.InCurrentCombo() && !HasActiveArtifact())
 	{
 		C.AwardAdrenaline(RegenAmount);
 	}

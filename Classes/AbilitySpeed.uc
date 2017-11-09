@@ -18,7 +18,7 @@ static simulated function ModifyPawn(Pawn Other, int AbilityLevel)
 
 defaultproperties
 {
-     AbilityName="Quickfoot"
+     AbilityName="ÿóQuickfoot"
      Description="Increases your speed in all environments by 5% per level. The Speed adrenaline combo will stack with this effect. You must be a Level equal to ten times the ability level you wish to have before you can purchase it. (Max Level: 4)"
      StartingCost=10
      CostAddPerLevel=5

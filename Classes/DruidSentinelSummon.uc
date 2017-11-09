@@ -298,5 +298,5 @@ function bool SpawnEnergyWall(TransBeacon Beacon, Pawn P, EngineerPointsInv epi)
 defaultproperties
 {
      IconMaterial=Texture'fpsRPGTex.Icons.SummonTurretIcon'
-     ItemName="Sentinel"
+     ItemName=""
 }

@@ -3,10 +3,10 @@ class DruidsRPGKeyBinding extends GUIUserKeyBinding
 
 defaultproperties
 {
-     KeyData(0)=(KeyLabel="fpsRPG Extensions",bIsSection=True)
+     KeyData(0)=(KeyLabel="UT2004 RPG Extensions",bIsSection=True)
      KeyData(1)=(Alias="DropHealth",KeyLabel="Drop Health")
      KeyData(2)=(Alias="DropAdrenaline",KeyLabel="Drop Adrenaline")
-     KeyData(3)=(KeyLabel="fpsRPG Artifacts",bIsSection=True)
+     KeyData(3)=(KeyLabel="UT2004 RPG Artifacts",bIsSection=True)
      KeyData(4)=(Alias="SelectTriple",KeyLabel="Select Triple")
      KeyData(5)=(Alias="SelectGlobe",KeyLabel="Select Globe")
      KeyData(6)=(Alias="SelectMWM",KeyLabel="Select Magic Weapon Maker")

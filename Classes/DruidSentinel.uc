@@ -9,6 +9,6 @@ simulated event PostBeginPlay()
 
 defaultproperties
 {
-     DefaultWeaponClassName="DruidWeaponSentinel"
+     DefaultWeaponClassName=""
      bNoTeamBeacon=False
 }

@@ -33,7 +33,7 @@ static simulated function ModifyPawn(Pawn Other, int AbilityLevel)
 
 defaultproperties
 {
-     AbilityName="Airmaster"
+     AbilityName="ÿ­Airmaster"
      Description="Increases your air control by 50% per level. You must be a Level equal to ten times the ability level you wish to have before you can purchase it. (Max Level: 5)"
      StartingCost=10
      CostAddPerLevel=5

@@ -52,7 +52,7 @@ static function ModifyPawn(Pawn Other, int AbilityLevel)
 	for (m = Other.Level.Game.BaseMutator; m != None; m = m.NextMutator)
 		if (MutfpsRPG(m) != None)
 		{
-			RPGMut = MutfpsRPG(M);
+			RPGMut = MutfpsRPG(m);
 			break;
 		}
 

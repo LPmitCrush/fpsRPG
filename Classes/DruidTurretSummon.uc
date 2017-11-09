@@ -45,5 +45,5 @@ function bool SpawnIt(TransBeacon Beacon, Pawn P, EngineerPointsInv epi)
 defaultproperties
 {
      IconMaterial=Texture'fpsRPGTex.Icons.SummonTurretIcon'
-     ItemName="Turret"
+     ItemName=""
 }

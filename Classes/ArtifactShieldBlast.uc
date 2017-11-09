@@ -55,7 +55,7 @@ function PreBeginPlay()
 					return; //try again next time?
 				}
 
-				//this will also add it after UT2004RPG, which will be necessary.
+				//this will also add it after fpsRPG, which will be necessary.
 				Level.Game.GameRulesModifiers.AddGameRules(SG);
 				break;
 			}
